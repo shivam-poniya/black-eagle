@@ -33,20 +33,20 @@ export default function Home() {
             className="max-w-4xl"
           >
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold font-heading leading-tight mb-8 text-foreground">
-              Scale Your Tech Team
+              Scale Your Engineering Team with Global IT Talent
             </h1>
             <p className="text-lg md:text-xl text-foreground/70 mb-10 max-w-2xl leading-relaxed">
-              Hire pre-vetted remote developers and dedicated teams. Faster, smarter, cost-effective.
+              We help startups and enterprises hire pre-vetted remote developers and dedicated engineering teams—fast, flexible, and cost-effective.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-semibold rounded-lg px-8 h-12 cursor-pointer">
-                  Get Started
+                  Book a Free Consultation
                 </Button>
               </Link>
               <Link href="/talent">
                 <Button size="lg" variant="outline" className="rounded-lg px-8 h-12 border-foreground/20 cursor-pointer font-semibold">
-                  View Talent
+                  View Available Talent
                 </Button>
               </Link>
             </div>
@@ -54,15 +54,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Why Companies Trust Us */}
       <section className="py-20 md:py-32 bg-background">
         <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-3xl mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold font-heading mb-6">Why Companies Trust Black Eagle</h2>
+            <p className="text-lg text-foreground/60">
+              From talent sourcing and technical vetting to payroll, compliance, and ongoing management—we handle everything, so you can focus on building and scaling great products.
+            </p>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: Globe, title: "Global Talent", desc: "Top engineers worldwide" },
-              { icon: Zap, title: "Fast Hiring", desc: "7-14 days to hire" },
-              { icon: ShieldCheck, title: "Secure", desc: "IP protection & compliance" },
-              { icon: Users, title: "Transparent", desc: "No hidden fees" },
+              { icon: Globe, title: "Global Talent Pool", desc: "Access to pre-vetted professionals worldwide" },
+              { icon: Zap, title: "Accelerated Hiring", desc: "Fast turnaround without compromise" },
+              { icon: ShieldCheck, title: "Enterprise Security", desc: "IP protection, NDAs & compliance" },
+              { icon: Users, title: "Transparent Pricing", desc: "Predictable, no hidden costs" },
             ].map((feature, idx) => (
               <motion.div 
                 key={idx}
@@ -87,54 +94,89 @@ export default function Home() {
             <p className="text-lg text-foreground/60 max-w-2xl">Flexible engagement models built for your needs.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: "Staff Augmentation", desc: "Extend your team with contract or full-time developers." },
-              { title: "Dedicated Teams", desc: "Full offshore team managed by us, controlled by you." },
-              { title: "Managed Teams", desc: "Complete HR, payroll, and infrastructure support." }
+              { 
+                title: "IT Staff Augmentation", 
+                desc: "Scale your existing team with experienced developers who integrate seamlessly into your workflows—without long-term hiring risks." 
+              },
+              { 
+                title: "Dedicated Teams", 
+                desc: "Build a fully dedicated offshore team aligned to your product, timelines, and budget—managed for performance and continuity." 
+              },
+              { 
+                title: "RPO Services", 
+                desc: "End-to-end hiring support including sourcing, screening, interviews, and onboarding—so you hire efficiently without recruitment overhead." 
+              },
+              { 
+                title: "Managed Teams", 
+                desc: "We manage HR, payroll, compliance, infrastructure, and retention while you maintain full control over delivery and execution." 
+              }
             ].map((service, idx) => (
               <motion.div
                 key={idx}
                 {...fadeIn}
                 transition={{ delay: idx * 0.1 }}
-                className="p-8 rounded-lg border border-border hover:border-primary hover:bg-primary/5 transition-all group"
+                className="p-6 rounded-lg border border-border hover:border-primary hover:bg-primary/5 transition-all group"
               >
-                <h3 className="text-2xl font-bold mb-4 text-foreground">{service.title}</h3>
-                <p className="text-foreground/70 mb-6 leading-relaxed">{service.desc}</p>
-                <Link href="/services" className="text-primary font-semibold text-sm flex items-center gap-2 group-hover:gap-3 transition-all">
-                  Learn more <span>→</span>
-                </Link>
+                <h3 className="text-lg font-bold mb-3 text-foreground">{service.title}</h3>
+                <p className="text-foreground/70 mb-4 text-sm leading-relaxed">{service.desc}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Tech Stack */}
+      {/* Talent & Expertise */}
       <section className="py-20 md:py-32 bg-background">
-        <div className="container mx-auto px-4 md:px-6 text-center">
-          <h3 className="text-3xl font-bold font-heading mb-12">Technology Expertise</h3>
-          <div className="flex flex-wrap justify-center gap-3">
-            {["React", "Node.js", "Java", "Spring Boot", "Next.js", "AWS", "Docker", "PostgreSQL", "Kubernetes", "MongoDB"].map((tech) => (
-              <span key={tech} className="px-4 py-2 rounded-lg bg-primary/10 text-primary font-semibold text-sm">
-                {tech}
-              </span>
-            ))}
+        <div className="container mx-auto px-4 md:px-6">
+          <h2 className="text-3xl md:text-4xl font-bold font-heading mb-12">Talent & Expertise</h2>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div>
+              <h3 className="text-2xl font-bold font-heading mb-6">Roles We Offer</h3>
+              <ul className="space-y-3">
+                {[
+                  "Frontend Developers",
+                  "Backend Developers", 
+                  "Full-Stack Engineers",
+                  "Mobile Application Developers",
+                  "QA & Automation Engineers",
+                  "DevOps & Cloud Engineers"
+                ].map((role, idx) => (
+                  <li key={idx} className="flex items-center gap-3">
+                    <Check className="w-5 h-5 text-primary" />
+                    <span className="font-medium">{role}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-bold font-heading mb-6">Technology Expertise</h3>
+              <div className="flex flex-wrap gap-3">
+                {["Java", "Spring Boot", "Node.js", "React", "Angular", "Next.js", "React Native", "AWS", "Docker", "Kubernetes", "PostgreSQL", "MongoDB"].map((tech) => (
+                  <span key={tech} className="px-4 py-2 rounded-lg bg-primary/10 text-primary font-semibold text-sm">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Process Section */}
+      {/* How It Works */}
       <section className="py-20 md:py-32 bg-primary text-white">
         <div className="container mx-auto px-4 md:px-6">
           <h2 className="text-4xl md:text-5xl font-bold font-heading mb-16 text-center">How It Works</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-              { num: "1", title: "Share Your Needs", desc: "Tell us your tech stack and requirements." },
-              { num: "2", title: "We Screen Talent", desc: "Pre-vetted candidates within days." },
-              { num: "3", title: "You Interview", desc: "Meet and approve your team." },
-              { num: "4", title: "We Manage", desc: "Onboarding, support, and growth." },
+              { num: "1", title: "Share Your Requirements", desc: "Tell us your tech stack, experience level, and team size." },
+              { num: "2", title: "Candidate Shortlisting", desc: "We screen and share the most suitable profiles." },
+              { num: "3", title: "Interview & Selection", desc: "You interview and approve the candidates." },
+              { num: "4", title: "Onboarding & Delivery", desc: "We onboard, manage, and support the team while you drive execution." },
             ].map((item, idx) => (
               <motion.div 
                 key={idx}
@@ -153,14 +195,44 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Why Choose Us */}
+      <section className="py-20 md:py-32 bg-foreground/5">
+        <div className="container mx-auto px-4 md:px-6">
+          <h2 className="text-3xl md:text-4xl font-bold font-heading mb-12">Why Choose Us</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              "Pre-vetted, production-ready engineers",
+              "Flexible hiring and engagement models",
+              "Full IP protection & NDAs",
+              "Dedicated account management",
+              "Time-zone aligned collaboration",
+              "Long-term partnership approach"
+            ].map((item, idx) => (
+              <motion.div 
+                key={idx}
+                {...fadeIn}
+                transition={{ delay: idx * 0.1 }}
+                className="flex items-start gap-3 p-4"
+              >
+                <Check className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                <span className="font-medium text-lg">{item}</span>
+              </motion.div>
+            ))}
+          </div>
+          <p className="text-lg text-foreground/70 mt-12 italic">
+            We don't just provide talent—we build long-term partnerships.
+          </p>
+        </div>
+      </section>
+
       {/* Testimonials */}
       <section className="py-20 md:py-32 bg-background">
         <div className="container mx-auto px-4 md:px-6">
-          <h2 className="text-4xl md:text-5xl font-bold font-heading mb-12 text-center">Why Teams Choose Us</h2>
+          <h2 className="text-4xl md:text-5xl font-bold font-heading mb-12 text-center">Client Testimonials</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              { quote: "Scaled our team in 2 weeks. Exceptional quality and communication.", author: "US SaaS Founder" },
-              { quote: "A partner that understands technology and business equally well.", author: "CTO, European Startup" }
+              { quote: "We scaled our engineering team quickly with highly skilled developers. Communication and quality exceeded expectations.", author: "Founder, US SaaS Company" },
+              { quote: "A reliable outsourcing partner that understands both technology and business outcomes.", author: "CTO, European Startup" }
             ].map((testimonial, idx) => (
               <motion.div 
                 key={idx}
@@ -171,7 +243,7 @@ export default function Home() {
                 <div className="mb-4 text-primary">
                   {[1,2,3,4,5].map(i => <span key={i} className="text-lg">★</span>)}
                 </div>
-                <p className="text-lg font-medium mb-4 text-foreground">{testimonial.quote}</p>
+                <p className="text-lg font-medium mb-4 text-foreground italic">{testimonial.quote}</p>
                 <p className="text-sm text-foreground/60">— {testimonial.author}</p>
               </motion.div>
             ))}
@@ -182,9 +254,9 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-20 md:py-32 bg-foreground/5">
         <div className="container mx-auto px-4 md:px-6 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold font-heading mb-6">Ready to Hire?</h2>
+          <h2 className="text-4xl md:text-5xl font-bold font-heading mb-6">Ready to Scale Your Team?</h2>
           <p className="text-lg text-foreground/70 mb-10 max-w-2xl mx-auto">
-            Get your perfect team in 7-14 days.
+            Let's discuss your requirements and connect you with the right talent.
           </p>
           <Link href="/contact">
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-semibold rounded-lg px-10 h-12 cursor-pointer">

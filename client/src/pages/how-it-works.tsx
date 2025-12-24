@@ -1,13 +1,14 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { Check } from "lucide-react";
 import { Link } from "wouter";
 
 export default function HowItWorks() {
   const steps = [
-    { num: "1", title: "Share Your Needs", desc: "Tell us your tech stack and requirements." },
-    { num: "2", title: "We Screen", desc: "Pre-vetted candidates within days." },
-    { num: "3", title: "You Interview", desc: "Meet and approve your team." },
-    { num: "4", title: "We Manage", desc: "Onboarding, support, and growth." }
+    { num: "1", title: "Share Your Requirements", desc: "Tell us your tech stack, experience level, and team size." },
+    { num: "2", title: "Candidate Shortlisting", desc: "We screen and share the most suitable profiles." },
+    { num: "3", title: "Interview & Selection", desc: "You interview and approve the candidates." },
+    { num: "4", title: "Onboarding & Delivery", desc: "We onboard, manage, and support the team while you drive execution." }
   ];
 
   return (
@@ -20,7 +21,10 @@ export default function HowItWorks() {
         >
           <h1 className="text-5xl md:text-6xl font-bold font-heading mb-6">How It Works</h1>
           <p className="text-xl text-foreground/60 max-w-2xl mx-auto">
-            Fast, transparent, and risk-free hiring process designed for your success.
+            Simple. Transparent. Efficient.
+          </p>
+          <p className="text-lg text-foreground/60 mt-4 max-w-2xl mx-auto">
+            Our engagement process is designed to be flexible and risk-free.
           </p>
         </motion.div>
 
@@ -50,7 +54,7 @@ export default function HowItWorks() {
             "No upfront hiring costs",
             "Interview before commitment",
             "Replacement guarantee",
-            "Transparent billing"
+            "Complete billing transparency"
           ].map((benefit, idx) => (
             <motion.div 
               key={idx}
@@ -58,9 +62,10 @@ export default function HowItWorks() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="p-6 rounded-lg bg-primary/10 text-center border border-primary/20 font-medium"
+              className="p-6 rounded-lg bg-primary/10 border border-primary/20 flex items-start gap-3"
             >
-              ✓ {benefit}
+              <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+              <span className="font-medium">{benefit}</span>
             </motion.div>
           ))}
         </div>
@@ -68,7 +73,7 @@ export default function HowItWorks() {
         <div className="text-center">
           <Link href="/contact">
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-semibold cursor-pointer">
-              Start Hiring
+              Get Started
             </Button>
           </Link>
         </div>

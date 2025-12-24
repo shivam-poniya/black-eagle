@@ -15,14 +15,14 @@ export default function About() {
           >
             <h1 className="text-5xl md:text-6xl font-bold font-heading mb-8">About Us</h1>
             <p className="text-lg text-foreground/70 mb-6 leading-relaxed">
-              We connect global businesses with top engineering talent. Our mission is simple: bridge the talent gap with reliable, skilled, and cost-effective IT professionals.
+              We are a technology-driven Global IT Solutions company committed to helping businesses build high-performing engineering teams worldwide.
             </p>
             <p className="text-lg text-foreground/70 mb-10 leading-relaxed">
-              Since day one, we've been committed to building long-term partnerships grounded in transparency, quality, and mutual success.
+              Our mission is to bridge the global talent gap by connecting companies with reliable, skilled, and cost-effective IT professionals.
             </p>
             <Link href="/contact">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-semibold cursor-pointer">
-                  Work With Us
+                  Get In Touch
                 </Button>
             </Link>
           </motion.div>
@@ -39,25 +39,28 @@ export default function About() {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-          {[
-            { title: "Transparency", desc: "Clear communication at every step." },
-            { title: "Quality", desc: "Top-tier talent, rigorously vetted." },
-            { title: "Partnership", desc: "Your growth is our growth." },
-            { title: "Excellence", desc: "Committed to your success." }
-          ].map((value, idx) => (
-            <motion.div 
-              key={idx}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
-              className="p-6 rounded-lg border border-border hover:border-primary/50 hover:bg-primary/5 transition-all"
-            >
-              <h3 className="text-lg font-bold mb-2">{value.title}</h3>
-              <p className="text-sm text-foreground/60">{value.desc}</p>
-            </motion.div>
-          ))}
+        <div className="mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold font-heading mb-10">Our Core Values</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { title: "Transparency", desc: "Open communication and honest partnerships." },
+              { title: "Quality & Accountability", desc: "Delivering excellence and owning results." },
+              { title: "Long-Term Partnerships", desc: "Building lasting relationships with clients." },
+              { title: "Client Success", desc: "Your success is our success." }
+            ].map((value, idx) => (
+              <motion.div 
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.1 }}
+                className="p-6 rounded-lg border border-border hover:border-primary/50 hover:bg-primary/5 transition-all"
+              >
+                <h3 className="text-lg font-bold mb-2">{value.title}</h3>
+                <p className="text-sm text-foreground/60">{value.desc}</p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

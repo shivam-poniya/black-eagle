@@ -12,30 +12,30 @@ export default function Pricing() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          <h1 className="text-5xl md:text-6xl font-bold font-heading mb-6">Pricing</h1>
+          <h1 className="text-5xl md:text-6xl font-bold font-heading mb-6">Flexible Pricing Models</h1>
           <p className="text-xl text-foreground/60 max-w-2xl mx-auto">
-            Flexible models tailored to your needs and budget.
+            Every business is unique—our pricing adapts to your needs.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-20">
           {[
             {
-              title: "Monthly Resource",
-              desc: "Dedicated developer billed monthly.",
-              features: ["Full-time availability", "Direct management", "Flexible terms"],
+              title: "Monthly Resource Billing",
+              desc: "Predictable monthly costs for dedicated developers.",
+              features: ["Full-time availability", "Direct management", "Flexible engagement"],
               highlight: false
             },
             {
-              title: "Dedicated Team",
-              desc: "Complete managed team for your project.",
-              features: ["Project Manager included", "End-to-end delivery", "Scalable infrastructure", "Volume discounts"],
+              title: "Dedicated Team Model",
+              desc: "Complete managed team for your long-term needs.",
+              features: ["Team management", "Infrastructure included", "HR & compliance handled", "Scalable pricing"],
               highlight: true
             },
             {
-              title: "Hourly/Project",
-              desc: "Pay as you go for specific tasks.",
-              features: ["Flexible scope", "No long-term commitment", "Transparent billing"],
+              title: "Direct Hire / Placement",
+              desc: "One-time placement for permanent hires.",
+              features: ["Direct employment", "Placement fee only", "Replacement guarantee"],
               highlight: false
             }
           ].map((plan, idx) => (
@@ -77,22 +77,25 @@ export default function Pricing() {
                   }`}
                   variant={plan.highlight ? "default" : "outline"}
                 >
-                  Get Quote
+                  Get Custom Quote
                 </Button>
               </Link>
             </motion.div>
           ))}
         </div>
 
-        <div className="mt-20 p-8 rounded-lg bg-foreground/5 border border-border text-center">
-          <h3 className="text-2xl font-bold mb-6">Pricing Factors</h3>
+        <div className="p-8 rounded-lg bg-foreground/5 border border-border text-center max-w-3xl mx-auto">
+          <h3 className="text-2xl font-bold mb-6">Pricing Depends On</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {["Skill Level", "Tech Stack", "Duration", "Team Size"].map((factor, idx) => (
+            {["Skill Level & Role", "Technology Stack", "Engagement Duration", "Team Size"].map((factor, idx) => (
               <div key={idx} className="p-4 bg-background rounded-lg border border-border text-sm font-medium">
                 {factor}
               </div>
             ))}
           </div>
+          <p className="mt-8 text-foreground/70">
+            <strong>Ready to discuss your project?</strong> Contact us for a customized quote.
+          </p>
         </div>
       </div>
     </div>
