@@ -2,51 +2,51 @@ import heroBg from "@assets/generated_images/abstract_tech_network_visualization
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import { Check, Globe, Users, Zap, ShieldCheck } from "lucide-react";
+import { Check, Code2, Globe, Users, Zap, ShieldCheck } from "lucide-react";
 
 export default function Home() {
   const fadeIn = {
     initial: { opacity: 0, y: 20 },
     whileInView: { opacity: 1, y: 0 },
     viewport: { once: true },
-    transition: { duration: 0.5 }
+    transition: { duration: 0.6 }
   };
 
   return (
-    <div className="overflow-hidden bg-white">
+    <div className="overflow-hidden">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center pt-16 md:pt-20">
+      <section className="relative min-h-[90vh] flex items-center pt-20">
         <div className="absolute inset-0 z-0">
           <img 
             src={heroBg} 
             alt="Technology Background" 
-            className="w-full h-full object-cover opacity-10 grayscale"
+            className="w-full h-full object-cover opacity-90"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-white via-white/80 to-white" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40" />
         </div>
 
-        <div className="container mx-auto px-4 md:px-6 relative z-10">
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="max-w-4xl text-center mx-auto"
+            className="max-w-3xl"
           >
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold font-heading leading-tight mb-8 text-black">
-              Scale Your Engineering Team
+            <h1 className="text-5xl md:text-7xl font-bold font-heading leading-tight mb-6 text-foreground">
+              Scale Your Tech Team with <span className="text-primary">World-Class IT Talent</span>
             </h1>
-            <p className="text-lg md:text-xl text-grey-600 mb-10 max-w-2xl mx-auto leading-relaxed text-slate-600">
-              We help startups and enterprises hire pre-vetted remote developers and dedicated engineering teams—fast, flexible, and cost-effective.
+            <p className="text-xl md:text-2xl text-muted-foreground mb-10 leading-relaxed max-w-2xl">
+              We help startups and enterprises hire pre-vetted remote developers and dedicated teams — faster, smarter, and cost-effectively.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact">
-                <Button size="lg" className="btn-cta font-semibold rounded-none px-10 h-14 cursor-pointer text-lg">
+                <Button size="lg" className="text-lg px-8 h-14 bg-primary text-primary-foreground hover:bg-primary/90">
                   Book a Free Consultation
                 </Button>
               </Link>
               <Link href="/talent">
-                <Button size="lg" variant="outline" className="rounded-none px-10 h-14 border-black text-black hover:bg-black hover:text-white transition-all cursor-pointer font-semibold text-lg">
-                  View Available Talent
+                <Button size="lg" variant="outline" className="text-lg px-8 h-14 bg-white/80 backdrop-blur-sm">
+                  View Talent Profiles
                 </Button>
               </Link>
             </div>
@@ -54,32 +54,39 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Companies Trust Us */}
-      <section className="py-24 bg-white border-t border-grey-100">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-3xl mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold font-heading mb-6 text-black">Why Companies Trust Black Eagle</h2>
-            <p className="text-lg text-slate-600">
-              From talent sourcing and technical vetting to payroll, compliance, and ongoing management—we handle everything, so you can focus on building and scaling great products.
+      {/* Trust Badges / Who We Are Summary */}
+      <section className="py-24 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            {...fadeIn}
+            className="text-center max-w-3xl mx-auto mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold font-heading mb-6">Why Global Leaders Trust Black Eagle</h2>
+            <p className="text-lg text-muted-foreground">
+              From sourcing and vetting talent to payroll, compliance, and ongoing management — we take care of everything so you can focus on building great products.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { icon: Globe, title: "Global Talent Pool", desc: "Access to pre-vetted professionals worldwide" },
-              { icon: Zap, title: "Accelerated Hiring", desc: "Fast turnaround without compromise" },
-              { icon: ShieldCheck, title: "Enterprise Security", desc: "IP protection, NDAs & compliance" },
-              { icon: Users, title: "Transparent Pricing", desc: "Predictable, no hidden costs" },
+              { icon: Globe, title: "Global Talent Pool", desc: "Access top 1% engineers worldwide" },
+              { icon: Zap, title: "Fast Turnaround", desc: "Hire within 7-14 days" },
+              { icon: ShieldCheck, title: "Enterprise Security", desc: "Full IP protection & compliance" },
+              { icon: Users, title: "Transparent Pricing", desc: "No hidden fees or overhead" },
             ].map((feature, idx) => (
               <motion.div 
                 key={idx}
-                {...fadeIn}
-                transition={{ delay: idx * 0.1 }}
-                className="group"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.1, duration: 0.5 }}
+                className="bg-background p-8 rounded-xl shadow-sm border border-border/50 hover:shadow-md transition-shadow"
               >
-                <feature.icon className="w-10 h-10 text-black mb-6 group-hover:translate-y-[-4px] transition-transform duration-300" />
-                <h3 className="text-lg font-bold mb-3 text-black uppercase tracking-tight">{feature.title}</h3>
-                <p className="text-sm text-slate-500 leading-relaxed">{feature.desc}</p>
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                  <feature.icon className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
+                <p className="text-muted-foreground">{feature.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -87,105 +94,100 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="py-24 bg-slate-50">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="mb-16 text-center max-w-2xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold font-heading mb-4 text-black">Our Services</h2>
-            <p className="text-lg text-slate-600">Flexible engagement models built for your needs.</p>
+      <section className="py-24">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-16">
+            <div className="max-w-2xl">
+              <span className="text-primary font-semibold tracking-wider uppercase text-sm">Our Services</span>
+              <h2 className="text-4xl md:text-5xl font-bold font-heading mt-3">Flexible Engagement Models</h2>
+            </div>
+            <Link href="/services">
+              <Button variant="ghost" className="hidden md:flex gap-2 group">
+                View All Services 
+                <span className="group-hover:translate-x-1 transition-transform">→</span>
+              </Button>
+            </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { 
                 title: "IT Staff Augmentation", 
-                desc: "Scale your existing team with experienced developers who integrate seamlessly into your workflows." 
+                desc: "Quickly extend your existing team with skilled developers on a contract or full-time basis. Scale up or down without long-term commitments." 
               },
               { 
                 title: "Dedicated Teams", 
-                desc: "Build a fully dedicated offshore team aligned to your product, timelines, and budget." 
+                desc: "Build a fully managed, dedicated offshore team tailored to your project needs, timelines, and budget." 
               },
               { 
-                title: "RPO Services", 
-                desc: "End-to-end hiring support including sourcing, screening, interviews, and onboarding." 
-              },
-              { 
-                title: "Managed Teams", 
-                desc: "We manage HR, payroll, compliance, and infrastructure while you maintain control over delivery." 
+                title: "Managed Offshore Teams", 
+                desc: "We manage HR, payroll, compliance, infrastructure, and retention while you maintain full control over work and deliverables." 
               }
             ].map((service, idx) => (
               <motion.div
                 key={idx}
                 {...fadeIn}
-                transition={{ delay: idx * 0.1 }}
-                className="p-8 bg-white border border-slate-200 hover:border-black transition-all"
+                className="group p-8 rounded-2xl bg-muted/20 border border-border hover:bg-primary hover:text-primary-foreground transition-all duration-300"
               >
-                <h3 className="text-xl font-bold mb-4 text-black">{service.title}</h3>
-                <p className="text-slate-500 mb-6 text-sm leading-relaxed">{service.desc}</p>
+                <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
+                <p className="text-muted-foreground group-hover:text-primary-foreground/80 mb-8 leading-relaxed">
+                  {service.desc}
+                </p>
+                <div className="w-10 h-10 rounded-full bg-background flex items-center justify-center group-hover:bg-white/20">
+                  <span className="text-xl group-hover:text-white">→</span>
+                </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Talent & Expertise */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-            <div>
-              <h2 className="text-3xl md:text-5xl font-bold font-heading mb-12 text-black">Talent & Expertise</h2>
-              <ul className="space-y-6">
-                {[
-                  "Frontend Developers",
-                  "Backend Developers", 
-                  "Full-Stack Engineers",
-                  "Mobile Application Developers",
-                  "QA & Automation Engineers",
-                  "DevOps & Cloud Engineers"
-                ].map((role, idx) => (
-                  <li key={idx} className="flex items-center gap-4 text-lg border-b border-slate-100 pb-4">
-                    <span className="w-2 h-2 bg-black rounded-none" />
-                    <span className="font-medium text-black">{role}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="bg-slate-50 p-12">
-              <h3 className="text-2xl font-bold font-heading mb-8 text-black">Technology Expertise</h3>
-              <div className="flex flex-wrap gap-4">
-                {["Java", "Spring Boot", "Node.js", "React", "Angular", "Next.js", "AWS", "Docker", "Kubernetes", "PostgreSQL", "MongoDB"].map((tech) => (
-                  <span key={tech} className="px-5 py-2 bg-white border border-slate-200 text-black font-semibold text-sm">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
+      {/* Tech Stack Marquee (Static grid for now) */}
+      <section className="py-20 bg-background border-y border-border">
+        <div className="container mx-auto px-4 text-center">
+          <h3 className="text-xl font-semibold mb-12 text-muted-foreground">Expertise across modern technology stacks</h3>
+          <div className="flex flex-wrap justify-center gap-x-12 gap-y-8 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+            {["Java", "Spring Boot", "Node.js", "React", "Angular", "Next.js", "AWS", "Docker", "Kubernetes", "PostgreSQL", "MongoDB"].map((tech) => (
+              <span key={tech} className="text-2xl font-bold font-heading">{tech}</span>
+            ))}
           </div>
         </div>
       </section>
 
       {/* How It Works */}
-      <section className="py-24 bg-black text-white">
-        <div className="container mx-auto px-4 md:px-6">
-          <h2 className="text-4xl md:text-5xl font-bold font-heading mb-20 text-center">How It Works</h2>
+      <section className="py-24 bg-primary text-primary-foreground">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold font-heading mb-6">Simple, Transparent Process</h2>
+            <p className="text-lg text-primary-foreground/70 max-w-2xl mx-auto">
+              We streamline hiring so you can focus on building.
+            </p>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+            {/* Connecting Line (Desktop) */}
+            <div className="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-primary-foreground/20 z-0" />
+
             {[
-              { num: "01", title: "Share Requirements", desc: "Tell us your tech stack, experience level, and team size." },
-              { num: "02", title: "Shortlisting", desc: "We screen and share the most suitable profiles." },
-              { num: "03", title: "Interview", desc: "You interview and approve the candidates." },
-              { num: "04", title: "Onboarding", desc: "We manage and support the team while you drive execution." },
+              { step: "01", title: "Share Requirements", desc: "Tell us your tech stack & team size." },
+              { step: "02", title: "Shortlisting", desc: "We screen and share best-fit profiles." },
+              { step: "03", title: "Interview", desc: "You interview and approve candidates." },
+              { step: "04", title: "Onboard", desc: "We handle onboarding & management." },
             ].map((item, idx) => (
               <motion.div 
                 key={idx}
-                {...fadeIn}
-                transition={{ delay: idx * 0.1 }}
-                className="relative"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.2 }}
+                className="relative z-10"
               >
-                <div className="text-6xl font-black text-white/10 mb-6 absolute -top-8 -left-4 z-0">{item.num}</div>
-                <div className="relative z-10">
-                  <h3 className="text-xl font-bold mb-4 uppercase tracking-wider">{item.title}</h3>
-                  <p className="text-slate-400 text-sm leading-relaxed">{item.desc}</p>
+                <div className="w-24 h-24 rounded-full bg-primary border-4 border-primary-foreground/20 flex items-center justify-center text-3xl font-bold mx-auto mb-6 shadow-xl">
+                  {item.step}
+                </div>
+                <div className="text-center">
+                  <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                  <p className="text-primary-foreground/70 text-sm">{item.desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -194,37 +196,48 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4 md:px-6 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold font-heading mb-16 text-black">Client Success</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-            {[
-              { quote: "We scaled our engineering team quickly with highly skilled developers. Communication and quality exceeded expectations.", author: "Founder, US SaaS Company" },
-              { quote: "A reliable outsourcing partner that understands both technology and business outcomes.", author: "CTO, European Startup" }
-            ].map((testimonial, idx) => (
-              <motion.div 
-                key={idx}
-                {...fadeIn}
-                transition={{ delay: idx * 0.1 }}
-                className="text-left p-12 bg-slate-50 border-l-4 border-black"
-              >
-                <p className="text-xl font-medium mb-8 text-black leading-relaxed italic">"{testimonial.quote}"</p>
-                <p className="text-sm font-bold text-slate-500 uppercase tracking-widest">— {testimonial.author}</p>
-              </motion.div>
-            ))}
+      <section className="py-24 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <motion.div 
+              {...fadeIn}
+              className="bg-background p-10 rounded-2xl shadow-sm border border-border"
+            >
+              <div className="mb-6 text-primary">
+                {[1,2,3,4,5].map(i => <span key={i} className="text-xl">★</span>)}
+              </div>
+              <blockquote className="text-xl md:text-2xl font-medium mb-6 leading-relaxed">
+                “We scaled our engineering team in under two weeks with highly skilled developers. Communication and quality were excellent.”
+              </blockquote>
+              <cite className="not-italic font-semibold text-muted-foreground">— US SaaS Founder</cite>
+            </motion.div>
+
+            <motion.div 
+              {...fadeIn}
+              transition={{ delay: 0.2 }}
+              className="bg-background p-10 rounded-2xl shadow-sm border border-border"
+            >
+              <div className="mb-6 text-primary">
+                {[1,2,3,4,5].map(i => <span key={i} className="text-xl">★</span>)}
+              </div>
+              <blockquote className="text-xl md:text-2xl font-medium mb-6 leading-relaxed">
+                “A reliable outsourcing partner that understands both technology and business.”
+              </blockquote>
+              <cite className="not-italic font-semibold text-muted-foreground">— CTO, European Startup</cite>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-32 bg-slate-50 border-y border-slate-200">
-        <div className="container mx-auto px-4 md:px-6 text-center">
-          <h2 className="text-4xl md:text-6xl font-bold font-heading mb-8 text-black">Ready to Scale Your Team?</h2>
-          <p className="text-xl text-slate-600 mb-12 max-w-2xl mx-auto">
-            Let's discuss your requirements and connect you with the right talent.
+      {/* CTA */}
+      <section className="py-24">
+        <div className="container mx-auto px-4 text-center max-w-4xl">
+          <h2 className="text-4xl md:text-6xl font-bold font-heading mb-8">Ready to scale your team?</h2>
+          <p className="text-xl text-muted-foreground mb-12">
+            Let’s discuss your requirements and get you the right talent.
           </p>
           <Link href="/contact">
-            <Button size="lg" className="btn-cta font-bold rounded-none px-12 h-16 cursor-pointer text-xl">
+            <Button size="lg" className="h-16 px-10 text-xl rounded-full">
               Start Hiring Today
             </Button>
           </Link>
