@@ -18,74 +18,74 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border">
-      <div className="container mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
-        <Link href="/" className="text-xl font-bold font-heading cursor-pointer tracking-tight">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-slate-100">
+      <div className="container mx-auto px-4 md:px-6 h-20 flex items-center justify-between">
+        <Link href="/" className="text-2xl font-black font-heading cursor-pointer tracking-tighter text-black uppercase">
           Black Eagle
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-2">
-          {navLinks.map((link) => (
-            <Link 
-              key={link.href} 
-              href={link.href}
-              className={cn(
-                "px-3 py-2 text-sm font-medium transition-colors cursor-pointer rounded-md",
-                location === link.href
-                  ? "text-primary bg-primary/10"
-                  : "text-foreground/70 hover:text-foreground"
-              )}
-            >
-              {link.label}
-            </Link>
-          ))}
-          <div className="ml-2">
-            <Link href="/contact">
-              <Button size="sm" className="font-semibold bg-primary hover:bg-primary/90 text-white cursor-pointer">
-                Contact
-              </Button>
-            </Link>
+        <div className="hidden md:flex items-center gap-10">
+          <div className="flex items-center gap-8">
+            {navLinks.map((link) => (
+              <Link 
+                key={link.href} 
+                href={link.href}
+                className={cn(
+                  "text-sm font-bold uppercase tracking-widest transition-all cursor-pointer",
+                  location === link.href
+                    ? "text-black border-b-2 border-black"
+                    : "text-slate-400 hover:text-black"
+                )}
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
+          <Link href="/contact">
+            <Button size="sm" className="btn-cta font-bold rounded-none px-6 h-10 cursor-pointer uppercase tracking-widest text-xs">
+              Contact
+            </Button>
+          </Link>
         </div>
 
         {/* Mobile Nav */}
         <div className="md:hidden">
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="h-9 w-9">
-                <Menu className="h-5 w-5" />
+              <Button variant="ghost" size="icon" className="h-10 w-10">
+                <Menu className="h-6 w-6 text-black" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="p-0">
+            <SheetContent side="right" className="w-[300px] p-0 bg-white">
               <div className="flex flex-col h-full">
-                <div className="p-4 border-b border-border flex justify-between items-center">
-                  <span className="font-bold">Menu</span>
+                <div className="p-6 border-b border-slate-100 flex justify-between items-center">
+                  <span className="font-black text-xl uppercase tracking-tighter">Menu</span>
                   <SheetTrigger asChild>
                     <Button variant="ghost" size="icon" className="h-8 w-8">
-                      <X className="h-4 w-4" />
+                      <X className="h-5 w-5" />
                     </Button>
                   </SheetTrigger>
                 </div>
-                <div className="flex flex-col gap-1 p-4">
+                <div className="flex flex-col p-6 gap-6">
                   {navLinks.map((link) => (
                     <Link 
                       key={link.href} 
                       href={link.href}
                       className={cn(
-                        "px-3 py-2 text-sm font-medium rounded-md transition-colors cursor-pointer",
+                        "text-lg font-bold uppercase tracking-widest transition-all cursor-pointer",
                         location === link.href
-                          ? "text-primary bg-primary/10"
-                          : "text-foreground/70 hover:text-foreground"
+                          ? "text-black"
+                          : "text-slate-400"
                       )}
                       onClick={() => setIsOpen(false)}
                     >
                       {link.label}
                     </Link>
                   ))}
-                  <div className="mt-4 pt-4 border-t border-border">
+                  <div className="mt-4 pt-8 border-t border-slate-100">
                     <Link href="/contact" onClick={() => setIsOpen(false)}>
-                      <Button className="w-full bg-primary hover:bg-primary/90 text-white cursor-pointer">
+                      <Button className="btn-cta w-full font-bold rounded-none h-12 cursor-pointer uppercase tracking-widest">
                         Contact Us
                       </Button>
                     </Link>
