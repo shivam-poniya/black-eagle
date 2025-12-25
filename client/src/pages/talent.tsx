@@ -6,7 +6,7 @@ import { Link } from "wouter";
 export default function Talent() {
   const roles = [
     "Frontend Developers", "Backend Developers", "Full-Stack Engineers", 
-    "Mobile App Developers", "QA & Automation Engineers", "DevOps & Cloud Engineers"
+    "Mobile Application Developers", "QA & Automation Engineers", "DevOps & Cloud Engineers"
   ];
 
   const techStack = [
@@ -61,19 +61,20 @@ export default function Talent() {
             </div>
             
             <div className="mt-12 p-6 bg-primary/5 rounded-xl border border-primary/10">
-              <h3 className="font-bold mb-4">Experience Levels</h3>
+              <h3 className="font-bold mb-4">Production-Ready Engineers</h3>
+              <p className="text-muted-foreground mb-4">We provide professionals across mid, senior, and lead levels to match your project complexity.</p>
               <ul className="space-y-2">
                 <li className="flex justify-between border-b border-border/50 pb-2">
                   <span>Mid-Level</span>
-                  <span className="font-mono text-muted-foreground">3–5 years</span>
+                  <span className="font-medium">3–5 years</span>
                 </li>
                 <li className="flex justify-between border-b border-border/50 pb-2">
                   <span>Senior</span>
-                  <span className="font-mono text-muted-foreground">5–8 years</span>
+                  <span className="font-medium">5–8 years</span>
                 </li>
                 <li className="flex justify-between">
                   <span>Lead / Architect</span>
-                  <span className="font-mono text-muted-foreground">8+ years</span>
+                  <span className="font-medium">8+ years</span>
                 </li>
               </ul>
             </div>

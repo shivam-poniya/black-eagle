@@ -12,7 +12,7 @@ export default function HowItWorks() {
     {
       num: "02",
       title: "Candidate Shortlisting",
-      desc: "We screen and share the best-fit profiles within days."
+      desc: "We screen and share the most suitable profiles."
     },
     {
       num: "03",
@@ -36,7 +36,7 @@ export default function HowItWorks() {
         >
           <h1 className="text-4xl md:text-6xl font-bold font-heading mb-6">Simple. Transparent. Efficient.</h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Our hiring and engagement process is designed to be fast and risk-free.
+            Our engagement process is designed to be flexible and risk-free.
           </p>
         </motion.div>
 
@@ -68,8 +68,8 @@ export default function HowItWorks() {
           {[
             "No upfront hiring cost", 
             "Interview before commitment", 
-            "Replace resources if not satisfied", 
-            "Full transparency in billing"
+            "Replacement guarantee", 
+            "Complete billing transparency"
           ].map((benefit, idx) => (
             <motion.div 
               key={idx}

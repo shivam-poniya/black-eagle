@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import * as z from "zod";
+import * as fz from "zod";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -15,20 +15,20 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { motion } from "framer-motion";
-import { Mail, MapPin } from "lucide-react";
+import { Mail, Globe } from "lucide-react";
 
-const formSchema = z.object({
-  fullName: z.string().min(2, "Name is required"),
-  companyName: z.string().min(2, "Company name is required"),
-  email: z.string().email("Invalid email address"),
-  requiredSkills: z.string().min(2, "Please specify required skills"),
-  budget: z.string().optional(),
-  message: z.string().min(10, "Please provide more details"),
+const formSchema = fz.object({
+  fullName: fz.string().min(2, "Name is required"),
+  companyName: fz.string().min(2, "Company name is required"),
+  email: fz.string().email("Invalid email address"),
+  requiredSkills: fz.string().min(2, "Please specify required skills"),
+  budget: fz.string().optional(),
+  message: fz.string().min(10, "Please provide more details"),
 });
 
 export default function Contact() {
   const { toast } = useToast();
-  const form = useForm<z.infer<typeof formSchema>>({
+  const form = useForm<fz.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       fullName: "",
@@ -40,7 +40,7 @@ export default function Contact() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  function onSubmit(values: fz.infer<typeof formSchema>) {
     console.log(values);
     toast({
       title: "Inquiry Sent",
@@ -61,7 +61,7 @@ export default function Contact() {
           >
             <h1 className="text-4xl md:text-6xl font-bold font-heading mb-6">Contact Us</h1>
             <p className="text-xl text-muted-foreground mb-12">
-              Let’s talk about your hiring needs. Fill out the form and our team will reach out within 24 hours.
+              Let’s discuss your hiring and team-scaling needs. Fill out the form and our team will reach out.
             </p>
 
             <div className="space-y-8">
@@ -70,7 +70,7 @@ export default function Contact() {
                   <Mail className="text-primary w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold mb-1">Email Us</h3>
+                  <h3 className="text-lg font-bold mb-1">Get in Touch</h3>
                   <a href="mailto:contact@blackeagle.com" className="text-lg hover:text-primary transition-colors">
                     contact@blackeagle.com
                   </a>
@@ -78,11 +78,11 @@ export default function Contact() {
               </div>
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center shrink-0">
-                  <MapPin className="text-primary w-6 h-6" />
+                  <Globe className="text-primary w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold mb-1">Global Operations</h3>
-                  <p className="text-lg text-muted-foreground">Serving clients worldwide</p>
+                  <h3 className="text-lg font-bold mb-1">Serving Clients Globally</h3>
+                  <p className="text-lg text-muted-foreground">Expert support for US & European markets</p>
                 </div>
               </div>
             </div>
@@ -181,7 +181,7 @@ export default function Contact() {
                       <FormLabel>Message</FormLabel>
                       <FormControl>
                         <Textarea 
-                          placeholder="Tell us more about your project requirements..." 
+                          placeholder="Tell us more about your hiring needs..." 
                           className="min-h-[120px]"
                           {...field} 
                         />

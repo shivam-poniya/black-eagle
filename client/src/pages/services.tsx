@@ -4,36 +4,30 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 
 export default function Services() {
-  const fadeIn = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.5 }
-  };
-
   const services = [
     {
       title: "IT Staff Augmentation",
-      desc: "Quickly extend your existing team with skilled developers on a contract or full-time basis. Scale up or down without long-term commitments.",
+      desc: "Add skilled developers quickly without long hiring cycles or permanent commitments. Integrate talent seamlessly into your existing workflows.",
       icon: Users,
-      features: ["Immediate access to talent", "Seamless integration", "Flexible contracts"]
+      features: ["Quick integration", "Flexible scaling", "No long-term risk"]
     },
     {
       title: "Dedicated Development Teams",
-      desc: "Build a fully managed, dedicated offshore team tailored to your project needs, timelines, and budget.",
+      desc: "Fully dedicated teams working exclusively on your product with long-term continuity. Managed for high performance and cultural alignment.",
       icon: Terminal,
-      features: ["Full team management", "Aligned with your culture", "Long-term partnership"]
+      features: ["Exclusively focused", "Full performance management", "Long-term continuity"]
+    },
+    {
+      title: "Offshore Development Center (ODC)",
+      desc: "Set up a complete offshore team with infrastructure, HR, payroll, and compliance managed by us while you retain technical control.",
+      icon: Globe,
+      features: ["Full infrastructure", "Compliance handled", "Reduced overhead"]
     },
     {
       title: "Recruitment Process Outsourcing (RPO)",
-      desc: "We handle end-to-end hiring — sourcing, screening, interviews, and onboarding — so you get the best candidates without recruitment overhead.",
+      desc: "End-to-end hiring solutions for startups and enterprises. We handle sourcing, screening, and onboarding for efficient growth.",
       icon: Briefcase,
-      features: ["End-to-end hiring", "Reduced time-to-hire", "Quality guarantee"]
-    },
-    {
-      title: "Managed Offshore Teams",
-      desc: "We manage HR, payroll, compliance, infrastructure, and retention while you maintain full control over work and deliverables.",
-      icon: Globe,
-      features: ["HR & Compliance handled", "Infrastructure provided", "Retention focused"]
+      features: ["End-to-end support", "Optimized hiring", "Scalable solutions"]
     }
   ];
 
@@ -48,7 +42,7 @@ export default function Services() {
         >
           <h1 className="text-4xl md:text-6xl font-bold font-heading mb-6">Our Services</h1>
           <p className="text-xl text-muted-foreground">
-            We provide flexible IT outsourcing solutions designed to help businesses scale efficiently and reduce operational overhead.
+            We provide flexible global IT solutions designed to help businesses scale efficiently while reducing hiring and operational overhead.
           </p>
         </motion.div>
 
@@ -82,9 +76,9 @@ export default function Services() {
         </div>
 
         <div className="bg-primary text-primary-foreground rounded-3xl p-12 md:p-20 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold font-heading mb-6">Need a custom solution?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold font-heading mb-6">Need a Custom Solution?</h2>
           <p className="text-lg text-primary-foreground/80 mb-10 max-w-2xl mx-auto">
-            We understand every business is unique. Let's discuss a tailored engagement model that fits your goals.
+            Let's discuss a tailored engagement model that fits your unique business goals and scaling requirements.
           </p>
           <Link href="/contact">
             <Button size="lg" variant="secondary" className="font-semibold px-8 h-12">

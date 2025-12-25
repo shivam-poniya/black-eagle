@@ -13,12 +13,12 @@ export default function About() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl md:text-6xl font-bold font-heading mb-6">About Black Eagle</h1>
+            <h1 className="text-4xl md:text-6xl font-bold font-heading mb-6">About Us</h1>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              We are a technology-driven IT outsourcing company committed to helping global businesses build high-performing engineering teams.
+              We are a technology-driven <span className="text-foreground font-bold">Global IT Solutions company</span> committed to helping businesses build high-performing engineering teams worldwide.
             </p>
             <p className="text-lg text-muted-foreground mb-8">
-              Our mission is to bridge the talent gap by connecting companies with reliable, skilled, and cost-effective IT professionals worldwide.
+              Our mission is to bridge the global talent gap by connecting companies with reliable, skilled, and cost-effective IT professionals.
             </p>
             <Link href="/contact">
                 <Button size="lg">Work With Us</Button>
@@ -41,10 +41,10 @@ export default function About() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-24">
           {[
-            { title: "Transparency", desc: "Open communication at every step." },
-            { title: "Quality", desc: "Top-tier talent rigorously vetted." },
-            { title: "Partnership", desc: "We grow as you grow." },
-            { title: "Client Success", desc: "Your wins are our wins." }
+            { title: "Transparency", desc: "Open communication and clear processes." },
+            { title: "Quality", desc: "Strict vetting and high accountability." },
+            { title: "Partnership", desc: "Focus on long-term growth and continuity." },
+            { title: "Client Success", desc: "Driven by your business outcomes." }
           ].map((value, idx) => (
             <motion.div 
               key={idx}
@@ -55,7 +55,7 @@ export default function About() {
               className="p-8 bg-card border border-border rounded-xl hover:bg-primary hover:text-primary-foreground transition-colors group"
             >
               <h3 className="text-xl font-bold font-heading mb-3">{value.title}</h3>
-              <p className="text-muted-foreground group-hover:text-primary-foreground/80">{value.desc}</p>
+              <p className="text-muted-foreground group-hover:text-primary-foreground/80 text-sm">{value.desc}</p>
             </motion.div>
           ))}
         </div>

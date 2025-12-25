@@ -33,10 +33,10 @@ export default function Home() {
             className="max-w-3xl"
           >
             <h1 className="text-5xl md:text-7xl font-bold font-heading leading-tight mb-6 text-foreground">
-              Scale Your Tech Team with <span className="text-primary">World-Class IT Talent</span>
+              Scale Your Engineering Team with <span className="text-primary">Global IT Talent</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-10 leading-relaxed max-w-2xl">
-              We help startups and enterprises hire pre-vetted remote developers and dedicated teams — faster, smarter, and cost-effectively.
+              We help startups and enterprises hire pre-vetted remote developers and dedicated engineering teams—fast, flexible, and cost-effective.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact">
@@ -46,7 +46,7 @@ export default function Home() {
               </Link>
               <Link href="/talent">
                 <Button size="lg" variant="outline" className="text-lg px-8 h-14 bg-white/80 backdrop-blur-sm">
-                  View Talent Profiles
+                  View Available Talent
                 </Button>
               </Link>
             </div>
@@ -61,18 +61,21 @@ export default function Home() {
             {...fadeIn}
             className="text-center max-w-3xl mx-auto mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold font-heading mb-6">Why Global Leaders Trust Black Eagle</h2>
+            <h2 className="text-3xl md:text-4xl font-bold font-heading mb-6">Who We Are</h2>
+            <p className="text-lg text-muted-foreground mb-4">
+              We are a <span className="font-bold text-foreground">Global IT Talent Solutions Company</span> helping businesses scale their technology teams with highly skilled, remote IT professionals.
+            </p>
             <p className="text-lg text-muted-foreground">
-              From sourcing and vetting talent to payroll, compliance, and ongoing management — we take care of everything so you can focus on building great products.
+              From talent sourcing and technical vetting to payroll, compliance, and ongoing management—we handle everything, so you can focus on building and scaling great products.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { icon: Globe, title: "Global Talent Pool", desc: "Access top 1% engineers worldwide" },
-              { icon: Zap, title: "Fast Turnaround", desc: "Hire within 7-14 days" },
-              { icon: ShieldCheck, title: "Enterprise Security", desc: "Full IP protection & compliance" },
-              { icon: Users, title: "Transparent Pricing", desc: "No hidden fees or overhead" },
+              { icon: Globe, title: "Global Talent Pool", desc: "Access to a pre-vetted global talent pool" },
+              { icon: Zap, title: "Accelerated Hiring", desc: "Reduced time-to-hire turnaround" },
+              { icon: Users, title: "Predictable Pricing", desc: "Transparent and predictable pricing models" },
+              { icon: ShieldCheck, title: "Enterprise Grade", desc: "Full security, NDAs & IP protection" },
             ].map((feature, idx) => (
               <motion.div 
                 key={idx}
@@ -99,7 +102,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-end mb-16">
             <div className="max-w-2xl">
               <span className="text-primary font-semibold tracking-wider uppercase text-sm">Our Services</span>
-              <h2 className="text-4xl md:text-5xl font-bold font-heading mt-3">Flexible Engagement Models</h2>
+              <h2 className="text-4xl md:text-5xl font-bold font-heading mt-3">Specialized Engagement Models</h2>
             </div>
             <Link href="/services">
               <Button variant="ghost" className="hidden md:flex gap-2 group">
@@ -109,19 +112,23 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { 
                 title: "IT Staff Augmentation", 
-                desc: "Quickly extend your existing team with skilled developers on a contract or full-time basis. Scale up or down without long-term commitments." 
+                desc: "Scale your existing team with experienced developers who integrate seamlessly—without long-term hiring risks." 
               },
               { 
                 title: "Dedicated Teams", 
-                desc: "Build a fully managed, dedicated offshore team tailored to your project needs, timelines, and budget." 
+                desc: "Build a fully dedicated offshore team aligned to your product, timelines, and budget—managed for performance." 
               },
               { 
-                title: "Managed Offshore Teams", 
-                desc: "We manage HR, payroll, compliance, infrastructure, and retention while you maintain full control over work and deliverables." 
+                title: "RPO", 
+                desc: "End-to-end hiring support including sourcing, screening, and onboarding—hire efficiently without overhead." 
+              },
+              { 
+                title: "Managed Teams", 
+                desc: "We manage HR, payroll, compliance, and infrastructure while you maintain control over execution." 
               }
             ].map((service, idx) => (
               <motion.div
@@ -129,8 +136,8 @@ export default function Home() {
                 {...fadeIn}
                 className="group p-8 rounded-2xl bg-muted/20 border border-border hover:bg-primary hover:text-primary-foreground transition-all duration-300"
               >
-                <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
-                <p className="text-muted-foreground group-hover:text-primary-foreground/80 mb-8 leading-relaxed">
+                <h3 className="text-xl font-bold mb-4">{service.title}</h3>
+                <p className="text-muted-foreground group-hover:text-primary-foreground/80 mb-8 leading-relaxed text-sm">
                   {service.desc}
                 </p>
                 <div className="w-10 h-10 rounded-full bg-background flex items-center justify-center group-hover:bg-white/20">
@@ -142,55 +149,45 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Tech Stack Marquee (Static grid for now) */}
-      <section className="py-20 bg-background border-y border-border">
-        <div className="container mx-auto px-4 text-center">
-          <h3 className="text-xl font-semibold mb-12 text-muted-foreground">Expertise across modern technology stacks</h3>
-          <div className="flex flex-wrap justify-center gap-x-12 gap-y-8 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
-            {["Java", "Spring Boot", "Node.js", "React", "Angular", "Next.js", "AWS", "Docker", "Kubernetes", "PostgreSQL", "MongoDB"].map((tech) => (
-              <span key={tech} className="text-2xl font-bold font-heading">{tech}</span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works */}
+      {/* Why Choose Us */}
       <section className="py-24 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold font-heading mb-6">Simple, Transparent Process</h2>
-            <p className="text-lg text-primary-foreground/70 max-w-2xl mx-auto">
-              We streamline hiring so you can focus on building.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
-            {/* Connecting Line (Desktop) */}
-            <div className="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-primary-foreground/20 z-0" />
-
-            {[
-              { step: "01", title: "Share Requirements", desc: "Tell us your tech stack & team size." },
-              { step: "02", title: "Shortlisting", desc: "We screen and share best-fit profiles." },
-              { step: "03", title: "Interview", desc: "You interview and approve candidates." },
-              { step: "04", title: "Onboard", desc: "We handle onboarding & management." },
-            ].map((item, idx) => (
-              <motion.div 
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.2 }}
-                className="relative z-10"
-              >
-                <div className="w-24 h-24 rounded-full bg-primary border-4 border-primary-foreground/20 flex items-center justify-center text-3xl font-bold mx-auto mb-6 shadow-xl">
-                  {item.step}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-3xl md:text-5xl font-bold font-heading mb-8">Why Choose Us</h2>
+              <div className="space-y-6">
+                {[
+                  "Pre-vetted, production-ready engineers",
+                  "Flexible hiring and engagement models",
+                  "Full IP protection & NDAs",
+                  "Dedicated account management",
+                  "Time-zone aligned collaboration"
+                ].map((item, idx) => (
+                  <div key={idx} className="flex items-center gap-4">
+                    <div className="w-6 h-6 rounded-full bg-primary-foreground/20 flex items-center justify-center shrink-0">
+                      <Check className="w-4 h-4" />
+                    </div>
+                    <span className="text-lg opacity-90">{item}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="mt-10 text-xl font-bold opacity-100">
+                We don’t just provide talent—we build long-term partnerships.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                { label: "Talent", value: "Pre-vetted" },
+                { label: "Models", value: "Flexible" },
+                { label: "Protection", value: "Full IP" },
+                { label: "Partnership", value: "Long-term" }
+              ].map((stat, idx) => (
+                <div key={idx} className="bg-primary-foreground/10 p-8 rounded-2xl border border-primary-foreground/10 text-center">
+                  <div className="text-2xl font-bold mb-1">{stat.value}</div>
+                  <div className="text-sm opacity-60 uppercase tracking-widest">{stat.label}</div>
                 </div>
-                <div className="text-center">
-                  <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                  <p className="text-primary-foreground/70 text-sm">{item.desc}</p>
-                </div>
-              </motion.div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -207,9 +204,9 @@ export default function Home() {
                 {[1,2,3,4,5].map(i => <span key={i} className="text-xl">★</span>)}
               </div>
               <blockquote className="text-xl md:text-2xl font-medium mb-6 leading-relaxed">
-                “We scaled our engineering team in under two weeks with highly skilled developers. Communication and quality were excellent.”
+                “We scaled our engineering team quickly with highly skilled developers. Communication and quality exceeded expectations.”
               </blockquote>
-              <cite className="not-italic font-semibold text-muted-foreground">— US SaaS Founder</cite>
+              <cite className="not-italic font-semibold text-muted-foreground">— Founder, US SaaS Company</cite>
             </motion.div>
 
             <motion.div 
@@ -221,7 +218,7 @@ export default function Home() {
                 {[1,2,3,4,5].map(i => <span key={i} className="text-xl">★</span>)}
               </div>
               <blockquote className="text-xl md:text-2xl font-medium mb-6 leading-relaxed">
-                “A reliable outsourcing partner that understands both technology and business.”
+                “A reliable outsourcing partner that understands both technology and business outcomes.”
               </blockquote>
               <cite className="not-italic font-semibold text-muted-foreground">— CTO, European Startup</cite>
             </motion.div>
@@ -232,9 +229,9 @@ export default function Home() {
       {/* CTA */}
       <section className="py-24">
         <div className="container mx-auto px-4 text-center max-w-4xl">
-          <h2 className="text-4xl md:text-6xl font-bold font-heading mb-8">Ready to scale your team?</h2>
+          <h2 className="text-4xl md:text-6xl font-bold font-heading mb-8">Ready to Scale Your Team?</h2>
           <p className="text-xl text-muted-foreground mb-12">
-            Let’s discuss your requirements and get you the right talent.
+            Let’s discuss your requirements and connect you with the right talent.
           </p>
           <Link href="/contact">
             <Button size="lg" className="h-16 px-10 text-xl rounded-full">

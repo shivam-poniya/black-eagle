@@ -14,7 +14,7 @@ export default function Pricing() {
         >
           <h1 className="text-4xl md:text-6xl font-bold font-heading mb-6">Flexible Pricing Models</h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Every business is different. Our pricing adapts to your needs.
+            Every business is unique—our pricing adapts to your needs.
           </p>
         </motion.div>
 
@@ -23,18 +23,18 @@ export default function Pricing() {
             {
               title: "Monthly Resource",
               desc: "Dedicated developer billed monthly.",
-              features: ["Full-time dedication", "Direct management", "Monthly flat rate", "Scalable"]
-            },
-            {
-              title: "Hourly / Project",
-              desc: "Flexible engagement for specific tasks.",
-              features: ["Pay as you go", "Ideal for small tasks", "Project-based scope", "No long-term commitment"]
+              features: ["Full-time dedication", "Direct management", "Predictable flat rate", "Scalable"]
             },
             {
               title: "Dedicated Team",
-              desc: "Complete managed team for long-term.",
-              features: ["Project Manager included", "End-to-end delivery", "Custom infrastructure", "Volume discounts"],
+              desc: "Complete managed team for performance.",
+              features: ["Full continuity", "Managed delivery", "Volume discounts", "Aligned culture"],
               highlight: true
+            },
+            {
+              title: "Direct Hire",
+              desc: "One-time placement for your internal team.",
+              features: ["Long-term placement", "Success guarantee", "Pre-vetted talent", "Hassle-free hiring"]
             }
           ].map((plan, idx) => (
             <motion.div 
@@ -51,12 +51,12 @@ export default function Pricing() {
                 </div>
               )}
               <h3 className="text-2xl font-bold font-heading mb-2">{plan.title}</h3>
-              <p className="text-muted-foreground mb-8">{plan.desc}</p>
+              <p className="text-muted-foreground mb-8 text-sm">{plan.desc}</p>
               
               <ul className="space-y-4 mb-8">
                 {plan.features.map((feat, fIdx) => (
-                  <li key={fIdx} className="flex items-center gap-3">
-                    <Check className="w-5 h-5 text-primary" />
+                  <li key={fIdx} className="flex items-center gap-3 text-sm">
+                    <Check className="w-4 h-4 text-primary" />
                     <span>{feat}</span>
                   </li>
                 ))}
@@ -64,7 +64,7 @@ export default function Pricing() {
               
               <Link href="/contact">
                 <Button className="w-full" variant={plan.highlight ? "default" : "outline"}>
-                  Get a Quote
+                  Request a Quote
                 </Button>
               </Link>
             </motion.div>
@@ -72,12 +72,12 @@ export default function Pricing() {
         </div>
 
         <div className="bg-muted/30 rounded-xl p-8 md:p-12 text-center max-w-4xl mx-auto">
-          <h3 className="text-2xl font-bold mb-6">Pricing factors</h3>
+          <h3 className="text-2xl font-bold mb-6">Pricing Factors</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-muted-foreground">
-            <div className="p-4 bg-background rounded-lg">Skill Level</div>
-            <div className="p-4 bg-background rounded-lg">Tech Stack</div>
-            <div className="p-4 bg-background rounded-lg">Duration</div>
-            <div className="p-4 bg-background rounded-lg">Team Size</div>
+            <div className="p-4 bg-background rounded-lg text-sm font-semibold">Skill Level & Role</div>
+            <div className="p-4 bg-background rounded-lg text-sm font-semibold">Tech Stack</div>
+            <div className="p-4 bg-background rounded-lg text-sm font-semibold">Duration</div>
+            <div className="p-4 bg-background rounded-lg text-sm font-semibold">Team Size</div>
           </div>
         </div>
       </div>
