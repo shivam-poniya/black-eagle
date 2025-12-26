@@ -42,7 +42,7 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-            <span className="inline-block py-2 px-6 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-black tracking-[0.4em] uppercase mb-8 backdrop-blur-md">
+            <span className="inline-block py-2 px-8 rounded-full bg-primary text-primary-foreground text-sm font-black tracking-[0.6em] uppercase mb-10 shadow-[0_0_30px_rgba(59,130,246,0.5)]">
               Next-Gen IT Sourcing
             </span>
           </motion.div>
@@ -51,18 +51,9 @@ function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.8 }}
-            className="text-7xl md:text-[10rem] font-black font-heading leading-[0.8] mb-12 text-foreground tracking-tighter"
+            className="text-7xl md:text-[10rem] font-black font-heading leading-none mb-12 text-foreground tracking-tighter whitespace-nowrap"
           >
-            BLACK <br/>
-            <span className="text-primary italic relative">
-              EAGLE
-              <motion.span 
-                initial={{ width: 0 }}
-                animate={{ width: "100%" }}
-                transition={{ delay: 1.5, duration: 1 }}
-                className="absolute bottom-4 left-0 h-4 bg-primary/20 -z-10"
-              />
-            </span>
+            BLACK EAGLE
           </motion.h1>
           
           <motion.p 

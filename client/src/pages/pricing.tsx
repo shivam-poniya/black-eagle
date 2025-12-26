@@ -12,8 +12,11 @@ export default function Pricing() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          <h1 className="text-4xl md:text-6xl font-bold font-heading mb-6">Flexible Pricing Models</h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <span className="text-primary font-black tracking-[0.5em] uppercase text-xs mb-6 block">Investment Models</span>
+          <h1 className="text-6xl md:text-9xl font-black font-heading mb-10 tracking-tighter leading-[0.85]">
+            Flexible <br/><span className="text-primary italic">Pricing</span>
+          </h1>
+          <p className="text-2xl md:text-3xl text-muted-foreground font-light max-w-2xl mx-auto">
             Every business is unique—our pricing adapts to your needs.
           </p>
         </motion.div>

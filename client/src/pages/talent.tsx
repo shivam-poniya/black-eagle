@@ -95,7 +95,7 @@ export default function Talent() {
           >
             <h2 className="text-5xl font-black font-heading mb-10 tracking-tighter leading-none">Industry <br/><span className="text-primary italic">Verticals</span></h2>
             <div className="grid grid-cols-2 gap-6">
-              {["FinTech", "SaaS", "E-commerce", "AdTech", "Healthcare", "Travel"].map((ind) => (
+              {["FinTech", "AI & Machine Learning", "SaaS", "E-commerce", "AdTech", "Healthcare"].map((ind) => (
                 <div key={ind} className="flex items-center gap-4 text-xl font-bold tracking-tight">
                   <div className="w-2 h-2 rounded-full bg-primary" />
                   {ind}
