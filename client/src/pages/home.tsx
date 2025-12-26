@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import { Check, Globe, Zap, ShieldCheck, ArrowRight } from "lucide-react";
+import { Check, Globe, Zap, ShieldCheck, ArrowRight, Users } from "lucide-react";
 import { HeroScene } from "@/components/three/HeroScene";
 
 export default function Home() {
