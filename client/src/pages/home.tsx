@@ -39,7 +39,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7, duration: 0.8 }}
-              className="text-6xl md:text-8xl font-black font-heading leading-none mb-8 text-white tracking-tighter"
+              className="text-6xl md:text-8xl font-black font-heading leading-none mb-8 text-foreground tracking-tighter"
             >
               BLACK <span className="text-primary">EAGLE</span>
             </motion.h1>
@@ -48,7 +48,7 @@ export default function Home() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1, duration: 1 }}
-              className="text-xl md:text-2xl text-blue-100/60 mb-12 leading-relaxed max-w-2xl mx-auto font-light"
+              className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed max-w-2xl mx-auto font-light"
             >
               Scale your engineering team with elite global talent. Pre-vetted, production-ready, and seamlessly integrated.
             </motion.p>
@@ -60,13 +60,13 @@ export default function Home() {
               className="flex flex-col sm:flex-row gap-6 justify-center items-center"
             >
               <Link href="/contact">
-                <Button size="lg" className="text-lg px-10 h-16 bg-primary text-primary-foreground hover:bg-primary/90 rounded-full group">
+                <Button size="lg" className="text-lg px-10 h-16 bg-primary text-primary-foreground hover:bg-primary/90 rounded-full group cursor-pointer">
                   Get Started
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
               <Link href="/talent">
-                <Button size="lg" variant="outline" className="text-lg px-10 h-16 border-white/20 text-white hover:bg-white/10 rounded-full backdrop-blur-sm">
+                <Button size="lg" variant="outline" className="text-lg px-10 h-16 border-border text-foreground hover:bg-accent rounded-full backdrop-blur-sm cursor-pointer">
                   Explore Talent
                 </Button>
               </Link>
@@ -81,7 +81,7 @@ export default function Home() {
           transition={{ delay: 2, duration: 1 }}
           className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
         >
-          <span className="text-[10px] uppercase tracking-[0.2em] text-white/30 font-bold">Scroll to Discover</span>
+          <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground font-bold">Scroll to Discover</span>
           <div className="w-[1px] h-12 bg-gradient-to-b from-primary to-transparent" />
         </motion.div>
       </section>

@@ -59,7 +59,7 @@ function FloatingCore() {
 
 export function HeroScene() {
   return (
-    <div className="absolute inset-0 -z-10 bg-[#020617]">
+    <div className="absolute inset-0 -z-10 bg-background">
       <Canvas>
         <PerspectiveCamera makeDefault position={[0, 0, 5]} />
         <ambientLight intensity={0.5} />
@@ -69,7 +69,7 @@ export function HeroScene() {
         <BackgroundParticles />
         <FloatingCore />
         
-        <fog attach="fog" args={["#020617", 5, 15]} />
+        <fog attach="fog" args={["white", 5, 15]} />
       </Canvas>
     </div>
   );
