@@ -51,7 +51,7 @@ function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.8 }}
-            className="text-7xl md:text-[10rem] font-black font-heading leading-none mb-12 text-foreground tracking-tighter whitespace-nowrap"
+            className="text-4xl sm:text-7xl md:text-[10rem] font-black font-heading leading-none mb-8 sm:mb-12 text-foreground tracking-tighter"
           >
             BLACK EAGLE
           </motion.h1>
@@ -60,7 +60,7 @@ function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 1 }}
-            className="text-xl md:text-3xl text-muted-foreground mb-16 leading-relaxed max-w-3xl mx-auto font-light tracking-tight"
+            className="text-lg sm:text-xl md:text-3xl text-muted-foreground mb-10 sm:mb-16 leading-relaxed max-w-3xl mx-auto font-light tracking-tight"
           >
             Scale your engineering team with elite global talent. <br className="hidden md:block" />
             Pre-vetted, production-ready, and seamlessly integrated.
@@ -161,10 +161,10 @@ export default function Home() {
       {/* Services Section */}
       <section className="py-32 bg-background/40 backdrop-blur-sm relative">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-24">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-16 md:mb-24">
             <div className="max-w-2xl">
-              <span className="text-primary font-bold tracking-[0.3em] uppercase text-xs mb-4 block">Our Solutions</span>
-              <h2 className="text-5xl md:text-8xl font-black font-heading mt-4 tracking-tighter leading-[0.85]">Elite <br/><span className="text-primary italic">Engagement</span> Models</h2>
+              <span className="text-primary font-bold tracking-[0.3em] uppercase text-[10px] sm:text-xs mb-4 block">Our Solutions</span>
+              <h2 className="text-4xl sm:text-5xl md:text-8xl font-black font-heading mt-4 tracking-tighter leading-[0.85]">Elite <br/><span className="text-primary italic">Engagement</span> Models</h2>
             </div>
             <Link href="/services">
               <Button variant="link" className="hidden md:flex gap-2 text-primary font-black text-lg p-0 h-auto hover:no-underline group">
@@ -235,8 +235,8 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-4xl md:text-7xl font-black font-heading mb-10 tracking-tighter leading-[0.9]">Why Global Leaders <br/><span className="text-blue-200">Choose Us</span></h2>
-              <div className="space-y-6">
+              <h2 className="text-4xl sm:text-5xl md:text-7xl font-black font-heading mb-8 md:mb-10 tracking-tighter leading-[0.9]">Why Global Leaders <br/><span className="text-blue-200">Choose Us</span></h2>
+              <div className="space-y-4 sm:space-y-6">
                 {[
                   "Pre-vetted, production-ready engineers",
                   "Flexible hiring and engagement models",

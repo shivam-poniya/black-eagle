@@ -60,11 +60,11 @@ export default function Contact() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="text-primary font-black tracking-[0.5em] uppercase text-xs mb-6 block">Engagement</span>
-            <h1 className="text-6xl md:text-9xl font-black font-heading mb-10 tracking-tighter leading-[0.85]">
+            <span className="text-primary font-black tracking-[0.5em] uppercase text-[10px] sm:text-xs mb-6 block">Engagement</span>
+            <h1 className="text-4xl sm:text-6xl md:text-9xl font-black font-heading mb-8 md:mb-10 tracking-tighter leading-[0.85]">
               Let's <br/><span className="text-primary italic">Connect</span>
             </h1>
-            <p className="text-2xl text-muted-foreground mb-16 leading-relaxed font-light">
+            <p className="text-lg sm:text-2xl text-muted-foreground mb-12 md:mb-16 leading-relaxed font-light">
               Discuss your technical roadmap with our team-scaling experts. 
               We're ready to bridge the talent gap for your next big build.
             </p>

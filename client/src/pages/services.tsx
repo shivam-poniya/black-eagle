@@ -37,15 +37,15 @@ export default function Services() {
       
       <div className="container mx-auto px-4">
         <motion.div 
-          className="max-w-4xl mx-auto text-center mb-32"
+          className="max-w-4xl mx-auto text-center mb-16 md:mb-32"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          <span className="text-primary font-black tracking-[0.5em] uppercase text-xs mb-6 block">Our Solutions</span>
-          <h1 className="text-6xl md:text-9xl font-black font-heading mb-10 tracking-tighter leading-[0.85]">
+          <span className="text-primary font-black tracking-[0.5em] uppercase text-[10px] sm:text-xs mb-6 block">Our Solutions</span>
+          <h1 className="text-4xl sm:text-6xl md:text-9xl font-black font-heading mb-8 md:mb-10 tracking-tighter leading-[0.85]">
             Enterprise <br/><span className="text-primary italic">Grade</span> Services
           </h1>
-          <p className="text-2xl md:text-3xl text-muted-foreground font-light leading-relaxed">
+          <p className="text-lg sm:text-2xl md:text-3xl text-muted-foreground font-light leading-relaxed">
             Flexible global solutions designed to scale your engineering 
             capacity without the operational overhead.
           </p>

@@ -13,16 +13,16 @@ export default function About() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="text-primary font-black tracking-[0.5em] uppercase text-xs mb-6 block">Our DNA</span>
-            <h1 className="text-6xl md:text-9xl font-black font-heading mb-12 tracking-tighter leading-[0.85]">
+            <span className="text-primary font-black tracking-[0.5em] uppercase text-[10px] sm:text-xs mb-6 block">Our DNA</span>
+            <h1 className="text-4xl sm:text-6xl md:text-9xl font-black font-heading mb-8 md:mb-12 tracking-tighter leading-[0.85]">
               Built for <br/><span className="text-primary italic">Velocity</span>
             </h1>
-            <p className="text-2xl md:text-3xl text-muted-foreground font-light leading-relaxed mb-12">
+            <p className="text-lg sm:text-2xl md:text-3xl text-muted-foreground font-light leading-relaxed mb-12">
               We are a technology-driven Global IT Solutions firm committed 
               to helping businesses build high-performing engineering teams worldwide.
             </p>
             <Link href="/contact">
-                <Button size="lg" className="h-20 px-12 text-xl rounded-full">Work With Us</Button>
+                <Button size="lg" className="h-16 sm:h-20 px-8 sm:px-12 text-lg sm:text-xl rounded-full">Work With Us</Button>
             </Link>
           </motion.div>
           
