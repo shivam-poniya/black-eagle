@@ -5,6 +5,114 @@ import { cn } from "@/lib/utils";
 import { Check, Globe, Zap, ShieldCheck, ArrowRight, Users } from "lucide-react";
 import { HeroScene } from "@/components/three/HeroScene";
 
+function Hero() {
+  return (
+    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <HeroScene />
+      
+      {/* Abstract Design Elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <motion.div 
+          animate={{ 
+            rotate: 360,
+            scale: [1, 1.1, 1],
+          }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+          className="absolute top-[-10%] right-[-10%] w-[60%] h-[60%] border border-primary/20 rounded-full border-dashed"
+        />
+        <motion.div 
+          animate={{ 
+            rotate: -360,
+            scale: [1, 1.2, 1],
+          }}
+          transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+          className="absolute bottom-[-20%] left-[-10%] w-[70%] h-[70%] border border-primary/10 rounded-full"
+        />
+      </div>
+      
+      <div className="container mx-auto px-4 relative z-10 text-center">
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="max-w-4xl mx-auto"
+        >
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
+          >
+            <span className="inline-block py-2 px-6 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-black tracking-[0.4em] uppercase mb-8 backdrop-blur-md">
+              Next-Gen IT Sourcing
+            </span>
+          </motion.div>
+          
+          <motion.h1 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7, duration: 0.8 }}
+            className="text-7xl md:text-[10rem] font-black font-heading leading-[0.8] mb-12 text-foreground tracking-tighter"
+          >
+            BLACK <br/>
+            <span className="text-primary italic relative">
+              EAGLE
+              <motion.span 
+                initial={{ width: 0 }}
+                animate={{ width: "100%" }}
+                transition={{ delay: 1.5, duration: 1 }}
+                className="absolute bottom-4 left-0 h-4 bg-primary/20 -z-10"
+              />
+            </span>
+          </motion.h1>
+          
+          <motion.p 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1, duration: 1 }}
+            className="text-xl md:text-3xl text-muted-foreground mb-16 leading-relaxed max-w-3xl mx-auto font-light tracking-tight"
+          >
+            Scale your engineering team with elite global talent. <br className="hidden md:block" />
+            Pre-vetted, production-ready, and seamlessly integrated.
+          </motion.p>
+          
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.2, duration: 0.8 }}
+            className="flex flex-col sm:flex-row gap-8 justify-center items-center"
+          >
+            <Link href="/contact">
+              <Button size="lg" className="text-xl px-12 h-20 bg-primary text-primary-foreground hover:bg-primary/90 rounded-full group cursor-pointer shadow-2xl shadow-primary/40 transition-all hover:scale-105">
+                Get Started
+                <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-2 transition-transform" />
+              </Button>
+            </Link>
+            <Link href="/talent">
+              <Button size="lg" variant="outline" className="text-xl px-12 h-20 border-border text-foreground hover:bg-accent rounded-full backdrop-blur-xl cursor-pointer transition-all hover:scale-105">
+                Explore Talent
+              </Button>
+            </Link>
+          </motion.div>
+        </motion.div>
+      </div>
+      
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 2, duration: 1 }}
+        className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4"
+      >
+        <span className="text-[10px] uppercase tracking-[0.5em] text-muted-foreground font-black">Scroll</span>
+        <motion.div 
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className="w-[1px] h-16 bg-gradient-to-b from-primary to-transparent" 
+        />
+      </motion.div>
+    </section>
+  );
+}
+
 export default function Home() {
   const fadeIn = {
     initial: { opacity: 0, y: 20 },
@@ -15,77 +123,7 @@ export default function Home() {
 
   return (
     <div className="overflow-hidden">
-      {/* 3D Intro Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <HeroScene />
-        
-        <div className="container mx-auto px-4 relative z-10 text-center">
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            className="max-w-4xl mx-auto"
-          >
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5, duration: 0.8 }}
-            >
-              <span className="inline-block py-1 px-3 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold tracking-widest uppercase mb-6">
-                Next-Gen IT Sourcing
-              </span>
-            </motion.div>
-            
-            <motion.h1 
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7, duration: 0.8 }}
-              className="text-6xl md:text-8xl font-black font-heading leading-none mb-8 text-foreground tracking-tighter"
-            >
-              BLACK <span className="text-primary">EAGLE</span>
-            </motion.h1>
-            
-            <motion.p 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1, duration: 1 }}
-              className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed max-w-2xl mx-auto font-light"
-            >
-              Scale your engineering team with elite global talent. Pre-vetted, production-ready, and seamlessly integrated.
-            </motion.p>
-            
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.2, duration: 0.8 }}
-              className="flex flex-col sm:flex-row gap-6 justify-center items-center"
-            >
-              <Link href="/contact">
-                <Button size="lg" className="text-lg px-10 h-16 bg-primary text-primary-foreground hover:bg-primary/90 rounded-full group cursor-pointer">
-                  Get Started
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </Link>
-              <Link href="/talent">
-                <Button size="lg" variant="outline" className="text-lg px-10 h-16 border-border text-foreground hover:bg-accent rounded-full backdrop-blur-sm cursor-pointer">
-                  Explore Talent
-                </Button>
-              </Link>
-            </motion.div>
-          </motion.div>
-        </div>
-        
-        {/* Scroll Indicator */}
-        <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 2, duration: 1 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
-        >
-          <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground font-bold">Scroll to Discover</span>
-          <div className="w-[1px] h-12 bg-gradient-to-b from-primary to-transparent" />
-        </motion.div>
-      </section>
+      <Hero />
 
       {/* Trust Badges / Who We Are Summary */}
       <section className="py-32 bg-[#020617] relative">
