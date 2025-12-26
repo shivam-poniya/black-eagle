@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Check } from "lucide-react";
+import { Check, Cpu, Layers, Users, Zap } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Pricing() {
@@ -74,15 +74,35 @@ export default function Pricing() {
           ))}
         </div>
 
-        <div className="bg-muted/30 rounded-xl p-8 md:p-12 text-center max-w-4xl mx-auto">
-          <h3 className="text-2xl font-bold mb-6">Pricing Factors</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-muted-foreground">
-            <div className="p-4 bg-background rounded-lg text-sm font-semibold">Skill Level & Role</div>
-            <div className="p-4 bg-background rounded-lg text-sm font-semibold">Tech Stack</div>
-            <div className="p-4 bg-background rounded-lg text-sm font-semibold">Duration</div>
-            <div className="p-4 bg-background rounded-lg text-sm font-semibold">Team Size</div>
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="bg-card/30 backdrop-blur-3xl rounded-[4rem] p-16 md:p-24 border border-border/50 max-w-5xl mx-auto relative overflow-hidden"
+        >
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
+          <h3 className="text-4xl md:text-6xl font-black mb-12 tracking-tighter text-center">Pricing <span className="text-primary italic">Architecture</span></h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              { factor: "Skill Level & Role", desc: "From specialized independent contributors to strategic engineering leads.", icon: Users },
+              { factor: "Tech Stack Complexity", desc: "Standard web technologies to niche distributed systems and AI mastery.", icon: Cpu },
+              { factor: "Engagement Duration", desc: "Short-term tactical bursts to multi-year strategic partnerships.", icon: Layers },
+              { factor: "Team Composition", desc: "Single engineer augmentation to full-scale managed delivery pods.", icon: Zap }
+            ].map((item, idx) => (
+              <div key={idx} className="flex gap-6 p-8 rounded-3xl bg-background/40 border border-border/40 group hover:bg-primary transition-all duration-500">
+                <div className="w-14 h-14 shrink-0 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
+                  <item.icon className="w-7 h-7 text-primary group-hover:text-white" />
+                </div>
+                <div>
+                  <h4 className="text-xl font-black mb-2 tracking-tight group-hover:text-white transition-colors">{item.factor}</h4>
+                  <p className="text-muted-foreground group-hover:text-white/70 transition-colors leading-relaxed text-sm">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
