@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
 import { Check, Globe, Zap, ShieldCheck, ArrowRight, Users } from "lucide-react";
 import { HeroScene } from "@/components/three/HeroScene";
 
@@ -129,51 +130,61 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="py-32 bg-background">
+      <section className="py-32 bg-background/40 backdrop-blur-sm relative">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-20">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-24">
             <div className="max-w-2xl">
-              <span className="text-primary font-semibold tracking-wider uppercase text-sm">Our Services</span>
-              <h2 className="text-4xl md:text-6xl font-bold font-heading mt-4 tracking-tighter">Specialized Engagement Models</h2>
+              <span className="text-primary font-bold tracking-[0.3em] uppercase text-xs mb-4 block">Our Solutions</span>
+              <h2 className="text-5xl md:text-8xl font-black font-heading mt-4 tracking-tighter leading-[0.85]">Elite <br/><span className="text-primary italic">Engagement</span> Models</h2>
             </div>
             <Link href="/services">
-              <Button variant="ghost" className="hidden md:flex gap-2 group text-primary font-bold">
-                View All Services 
-                <span className="group-hover:translate-x-1 transition-transform">→</span>
+              <Button variant="link" className="hidden md:flex gap-2 text-primary font-black text-lg p-0 h-auto hover:no-underline group">
+                Exploration 
+                <span className="group-hover:translate-x-2 transition-transform duration-500">——→</span>
               </Button>
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               { 
-                title: "IT Staff Augmentation", 
-                desc: "Scale your existing team with experienced developers who integrate seamlessly—without long-term hiring risks." 
+                title: "Staff Augmentation", 
+                desc: "Elite engineers integrated into your sprint cycle in record time.",
+                icon: "01"
               },
               { 
                 title: "Dedicated Teams", 
-                desc: "Build a fully dedicated offshore team aligned to your product, timelines, and budget—managed for performance." 
+                desc: "Self-managing pods of excellence aligned with your core mission.",
+                icon: "02"
               },
               { 
-                title: "RPO", 
-                desc: "End-to-end hiring support including sourcing, screening, and onboarding—hire efficiently without overhead." 
+                title: "Strategic RPO", 
+                desc: "Revolutionizing your internal hiring via our proprietary global network.",
+                icon: "03"
               },
               { 
-                title: "Managed Teams", 
-                desc: "We manage HR, payroll, compliance, and infrastructure while you maintain control over execution." 
+                title: "Managed ODC", 
+                desc: "Fully operational offshore centers with enterprise-grade governance.",
+                icon: "04"
               }
             ].map((service, idx) => (
               <motion.div
                 key={idx}
-                {...fadeIn}
-                className="group p-10 rounded-3xl bg-muted/20 border border-border hover:bg-primary hover:text-primary-foreground transition-all duration-500 hover:-translate-y-2"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.1, duration: 0.8 }}
+                className="group p-12 rounded-[2.5rem] bg-card/30 border border-border/50 hover:bg-primary transition-all duration-700 hover:-translate-y-4 hover:shadow-[0_40px_80px_-15px_rgba(59,130,246,0.25)] flex flex-col justify-between min-h-[400px]"
               >
-                <h3 className="text-2xl font-bold mb-4 tracking-tight">{service.title}</h3>
-                <p className="text-muted-foreground group-hover:text-primary-foreground/80 mb-10 leading-relaxed text-sm">
-                  {service.desc}
-                </p>
-                <div className="w-12 h-12 rounded-full bg-background flex items-center justify-center group-hover:bg-white/20 transition-colors">
-                  <ArrowRight className="w-6 h-6 group-hover:text-white" />
+                <div>
+                  <span className="text-5xl font-black opacity-10 group-hover:opacity-20 transition-opacity mb-8 block font-heading">{service.icon}</span>
+                  <h3 className="text-3xl font-black mb-6 tracking-tighter leading-none group-hover:text-white transition-colors">{service.title}</h3>
+                  <p className="text-muted-foreground group-hover:text-white/80 mb-10 leading-relaxed text-lg transition-colors">
+                    {service.desc}
+                  </p>
+                </div>
+                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:bg-white/20 transition-all duration-500 group-hover:rotate-45">
+                  <ArrowRight className="w-8 h-8 group-hover:text-white group-hover:-rotate-45 transition-all duration-500" />
                 </div>
               </motion.div>
             ))}
@@ -183,15 +194,20 @@ export default function Home() {
 
       {/* Why Choose Us */}
       <section className="py-32 bg-primary text-primary-foreground relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
-            <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-white blur-[150px] rounded-full" />
-            <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-white blur-[150px] rounded-full" />
+        <div className="absolute top-0 left-0 w-full h-full opacity-20 pointer-events-none">
+            <div className="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-blue-400 blur-[180px] rounded-full animate-pulse" />
+            <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-indigo-500 blur-[180px] rounded-full animate-pulse" />
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-            <div>
-              <h2 className="text-4xl md:text-6xl font-bold font-heading mb-10 tracking-tighter leading-none">Why Global Leaders <br/>Choose Us</h2>
-              <div className="space-y-8">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-4xl md:text-7xl font-black font-heading mb-10 tracking-tighter leading-[0.9]">Why Global Leaders <br/><span className="text-blue-200">Choose Us</span></h2>
+              <div className="space-y-6">
                 {[
                   "Pre-vetted, production-ready engineers",
                   "Flexible hiring and engagement models",
@@ -205,25 +221,25 @@ export default function Home() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: idx * 0.1 }}
-                    className="flex items-center gap-6"
+                    className="flex items-center gap-6 group"
                   >
-                    <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center shrink-0">
-                      <Check className="w-5 h-5" />
+                    <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center shrink-0 border border-white/20 group-hover:bg-white/20 transition-all">
+                      <Check className="w-5 h-5 text-blue-200" />
                     </div>
-                    <span className="text-xl font-medium opacity-90">{item}</span>
+                    <span className="text-xl font-medium opacity-90 group-hover:opacity-100 transition-opacity">{item}</span>
                   </motion.div>
                 ))}
               </div>
-              <p className="mt-12 text-2xl font-bold opacity-100 italic border-l-4 border-white/30 pl-6">
-                We don’t just provide talent—we build long-term partnerships.
+              <p className="mt-16 text-2xl font-bold opacity-100 italic border-l-4 border-blue-400 pl-8 bg-white/5 py-6 rounded-r-2xl backdrop-blur-sm">
+                "We don’t just provide talent—we build long-term partnerships."
               </p>
-            </div>
+            </motion.div>
             <div className="grid grid-cols-2 gap-6">
               {[
-                { label: "Elite Talent", value: "Pre-vetted" },
-                { label: "Hiring Models", value: "Flexible" },
-                { label: "Security", value: "Full IP" },
-                { label: "Success Rate", value: "98.5%" }
+                { label: "Elite Talent", value: "Pre-vetted", color: "bg-blue-500/20" },
+                { label: "Hiring Models", value: "Flexible", color: "bg-indigo-500/20" },
+                { label: "Security", value: "Full IP", color: "bg-cyan-500/20" },
+                { label: "Success Rate", value: "98.5%", color: "bg-blue-400/20" }
               ].map((stat, idx) => (
                 <motion.div 
                     key={idx} 
@@ -231,10 +247,13 @@ export default function Home() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: idx * 0.1 }}
-                    className="bg-white/10 p-10 rounded-3xl border border-white/10 text-center backdrop-blur-md"
+                    className={cn(
+                      "p-12 rounded-[2rem] border border-white/10 text-center backdrop-blur-xl transition-transform hover:-translate-y-2",
+                      stat.color
+                    )}
                 >
-                  <div className="text-3xl font-black mb-2">{stat.value}</div>
-                  <div className="text-xs opacity-60 uppercase tracking-[0.2em] font-bold">{stat.label}</div>
+                  <div className="text-4xl font-black mb-3">{stat.value}</div>
+                  <div className="text-xs opacity-60 uppercase tracking-[0.3em] font-bold">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
