@@ -1,75 +1,87 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
+import { ArrowRight, Globe, Layers, Users, Zap } from "lucide-react";
 
 export default function HowItWorks() {
   const steps = [
     {
       num: "01",
-      title: "Share Your Requirements",
-      desc: "Tell us your tech stack, experience level, and team size."
+      title: "Requirement Analysis",
+      desc: "We dive deep into your tech stack, culture, and scaling goals to map out the perfect resource profile.",
+      icon: Layers
     },
     {
       num: "02",
-      title: "Candidate Shortlisting",
-      desc: "We screen and share the most suitable profiles."
+      title: "Strategic Selection",
+      desc: "Our vetting engine identifies the top 1% of talent, focusing on both technical mastery and soft skills.",
+      icon: Users
     },
     {
       num: "03",
-      title: "Interview & Selection",
-      desc: "You interview and approve the candidates."
+      title: "Elite Matching",
+      desc: "You interview candidates who have already passed our rigorous multi-stage screening process.",
+      icon: Zap
     },
     {
       num: "04",
-      title: "Onboarding & Delivery",
-      desc: "We onboard, manage, and support the team while you drive execution."
+      title: "Seamless Onboarding",
+      desc: "We manage the administrative heavy lifting while you focus on driving high-velocity engineering.",
+      icon: Globe
     }
   ];
 
   return (
-    <div className="py-12 md:py-24">
+    <div className="py-24 md:py-40">
       <div className="container mx-auto px-4">
         <motion.div 
-          className="text-center mb-24"
+          className="max-w-4xl mx-auto text-center mb-32"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          <h1 className="text-4xl md:text-6xl font-bold font-heading mb-6">Simple. Transparent. Efficient.</h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Our engagement process is designed to be flexible and risk-free.
+          <span className="text-primary font-black tracking-[0.5em] uppercase text-xs mb-6 block">Methodology</span>
+          <h1 className="text-6xl md:text-9xl font-black font-heading mb-10 tracking-tighter leading-[0.85]">
+            Precision <br/><span className="text-primary italic">Process</span>
+          </h1>
+          <p className="text-2xl md:text-3xl text-muted-foreground font-light leading-relaxed">
+            A high-velocity engagement model designed for startups 
+            and enterprises that don't compromise on quality.
           </p>
         </motion.div>
 
-        <div className="max-w-4xl mx-auto mb-24">
+        <div className="max-w-6xl mx-auto mb-40">
           {steps.map((step, idx) => (
             <motion.div 
               key={idx}
               initial={{ opacity: 0, x: idx % 2 === 0 ? -50 : 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="flex flex-col md:flex-row gap-8 items-center mb-16 last:mb-0 relative"
+              transition={{ duration: 0.8 }}
+              className={`flex flex-col ${idx % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-12 md:gap-24 items-center mb-32 last:mb-0`}
             >
-              <div className="w-24 h-24 shrink-0 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-3xl font-bold shadow-lg z-10">
-                {step.num}
+              <div className="w-full md:w-1/2">
+                <div className="relative aspect-square bg-muted/20 rounded-[4rem] border border-border/50 flex items-center justify-center overflow-hidden group">
+                  <div className="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors" />
+                  <step.icon className="w-32 h-32 text-primary opacity-20 group-hover:scale-110 transition-transform duration-700" />
+                  <span className="absolute top-12 left-12 text-8xl font-black font-heading opacity-5">{step.num}</span>
+                </div>
               </div>
-              <div className="flex-1 text-center md:text-left p-8 bg-card border border-border rounded-xl shadow-sm">
-                <h3 className="text-2xl font-bold font-heading mb-3">{step.title}</h3>
-                <p className="text-muted-foreground text-lg">{step.desc}</p>
+              <div className="w-full md:w-1/2 space-y-8">
+                <span className="text-7xl font-black font-heading text-primary/10">{step.num}</span>
+                <h3 className="text-4xl md:text-6xl font-black font-heading tracking-tighter leading-none">{step.title}</h3>
+                <p className="text-2xl text-muted-foreground font-light leading-relaxed">{step.desc}</p>
+                <div className="w-12 h-1 bg-primary" />
               </div>
-              {idx !== steps.length - 1 && (
-                <div className="absolute left-[3rem] top-24 bottom-[-4rem] w-0.5 bg-primary/20 hidden md:block -z-10" />
-              )}
             </motion.div>
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-40">
           {[
-            "No upfront hiring cost", 
-            "Interview before commitment", 
-            "Replacement guarantee", 
-            "Complete billing transparency"
+            "Zero upfront costs", 
+            "Interview-first commitment", 
+            "Success guarantee", 
+            "Total transparency"
           ].map((benefit, idx) => (
             <motion.div 
               key={idx}
@@ -77,16 +89,16 @@ export default function HowItWorks() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="p-6 bg-muted/30 rounded-lg text-center font-semibold"
+              className="p-12 bg-card/30 backdrop-blur-xl rounded-[3rem] border border-border/50 text-center"
             >
-              {benefit}
+              <h4 className="text-xl font-black tracking-tight">{benefit}</h4>
             </motion.div>
           ))}
         </div>
 
         <div className="text-center">
           <Link href="/contact">
-            <Button size="lg" className="px-12 h-14 text-lg">Start Your Search</Button>
+            <Button size="lg" className="h-24 px-16 text-2xl rounded-full shadow-2xl">Start Your Search</Button>
           </Link>
         </div>
       </div>

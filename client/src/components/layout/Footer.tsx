@@ -1,58 +1,58 @@
 import { Link } from "wouter";
+import { ArrowUpRight } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-primary text-primary-foreground pt-16 pb-8">
+    <footer className="bg-primary text-primary-foreground py-24 md:py-40 relative overflow-hidden">
+      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+      
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-          <div className="space-y-4">
-            <h3 className="text-2xl font-bold font-heading tracking-tighter">
-              Black Eagle
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-24 mb-32">
+          <div className="lg:col-span-5 space-y-12">
+            <h3 className="text-6xl md:text-8xl font-black font-heading tracking-tighter leading-none italic">
+              BLACK <br/>EAGLE
             </h3>
-            <p className="text-primary-foreground/70 text-sm leading-relaxed">
-              Global IT outsourcing and staff augmentation. We build world-class engineering teams for startups and enterprises.
+            <p className="text-2xl text-primary-foreground/60 font-light leading-relaxed max-w-md">
+              The global standard for high-velocity engineering teams. We bridge the talent gap for the world's most ambitious builds.
             </p>
           </div>
 
-          <div>
-            <h4 className="font-semibold mb-4 text-lg">Services</h4>
-            <ul className="space-y-2 text-sm text-primary-foreground/70">
-              <li><Link href="/services" className="hover:text-white transition-colors cursor-pointer">IT Staff Augmentation</Link></li>
-              <li><Link href="/services" className="hover:text-white transition-colors cursor-pointer">Dedicated Teams</Link></li>
-              <li><Link href="/services" className="hover:text-white transition-colors cursor-pointer">RPO Services</Link></li>
-              <li><Link href="/services" className="hover:text-white transition-colors cursor-pointer">Managed Offshore Teams</Link></li>
-            </ul>
-          </div>
+          <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-3 gap-16">
+            <div>
+              <h4 className="text-xs font-black tracking-[0.5em] uppercase opacity-40 mb-10">Strategy</h4>
+              <ul className="space-y-6 text-xl font-bold tracking-tight">
+                <li><Link href="/services" className="hover:text-white/60 transition-colors flex items-center gap-2">Solutions <ArrowUpRight className="w-4 h-4 opacity-40" /></Link></li>
+                <li><Link href="/how-it-works" className="hover:text-white/60 transition-colors flex items-center gap-2">Methodology <ArrowUpRight className="w-4 h-4 opacity-40" /></Link></li>
+                <li><Link href="/pricing" className="hover:text-white/60 transition-colors flex items-center gap-2">Engagement <ArrowUpRight className="w-4 h-4 opacity-40" /></Link></li>
+              </ul>
+            </div>
 
-          <div>
-            <h4 className="font-semibold mb-4 text-lg">Company</h4>
-            <ul className="space-y-2 text-sm text-primary-foreground/70">
-              <li><Link href="/about" className="hover:text-white transition-colors cursor-pointer">About Us</Link></li>
-              <li><Link href="/how-it-works" className="hover:text-white transition-colors cursor-pointer">How It Works</Link></li>
-              <li><Link href="/talent" className="hover:text-white transition-colors cursor-pointer">Our Talent</Link></li>
-              <li><Link href="/pricing" className="hover:text-white transition-colors cursor-pointer">Pricing</Link></li>
-            </ul>
-          </div>
+            <div>
+              <h4 className="text-xs font-black tracking-[0.5em] uppercase opacity-40 mb-10">Talent</h4>
+              <ul className="space-y-6 text-xl font-bold tracking-tight">
+                <li><Link href="/talent" className="hover:text-white/60 transition-colors flex items-center gap-2">Engineering <ArrowUpRight className="w-4 h-4 opacity-40" /></Link></li>
+                <li><Link href="/talent" className="hover:text-white/60 transition-colors flex items-center gap-2">Expertise <ArrowUpRight className="w-4 h-4 opacity-40" /></Link></li>
+                <li><Link href="/talent" className="hover:text-white/60 transition-colors flex items-center gap-2">Industries <ArrowUpRight className="w-4 h-4 opacity-40" /></Link></li>
+              </ul>
+            </div>
 
-          <div>
-            <h4 className="font-semibold mb-4 text-lg">Contact</h4>
-            <ul className="space-y-2 text-sm text-primary-foreground/70">
-              <li>contact@blackeagle.com</li>
-              <li>Global Operations</li>
-              <li className="pt-4">
-                <Link href="/contact" className="inline-block px-4 py-2 bg-white text-primary font-semibold rounded-md hover:bg-gray-100 transition-colors cursor-pointer">
-                  Start Hiring
-                </Link>
-              </li>
-            </ul>
+            <div>
+              <h4 className="text-xs font-black tracking-[0.5em] uppercase opacity-40 mb-10">Network</h4>
+              <ul className="space-y-6 text-xl font-bold tracking-tight">
+                <li><Link href="/about" className="hover:text-white/60 transition-colors flex items-center gap-2">Agency <ArrowUpRight className="w-4 h-4 opacity-40" /></Link></li>
+                <li><Link href="/contact" className="hover:text-white/60 transition-colors flex items-center gap-2">Connect <ArrowUpRight className="w-4 h-4 opacity-40" /></Link></li>
+              </ul>
+            </div>
           </div>
         </div>
 
-        <div className="border-t border-primary-foreground/10 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-primary-foreground/50">
-          <p>&copy; {new Date().getFullYear()} Black Eagle. All rights reserved.</p>
-          <div className="flex gap-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-white">Privacy Policy</a>
-            <a href="#" className="hover:text-white">Terms of Service</a>
+        <div className="flex flex-col md:flex-row justify-between items-center pt-16 border-t border-white/10 gap-8">
+          <p className="text-sm font-black tracking-widest uppercase opacity-40">
+            &copy; {new Date().getFullYear()} BLACK EAGLE ELITE.
+          </p>
+          <div className="flex gap-12 text-sm font-black tracking-widest uppercase opacity-40">
+            <a href="#" className="hover:opacity-100 transition-opacity">Privacy Architecture</a>
+            <a href="#" className="hover:opacity-100 transition-opacity">Terms of Engagement</a>
           </div>
         </div>
       </div>
