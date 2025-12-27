@@ -1,20 +1,16 @@
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Float, Sphere, MeshDistortMaterial, PerspectiveCamera } from "@react-three/drei";
-import { useRef, useMemo } from "react";
+import { useRef } from "react";
 import * as THREE from "three";
 
 function BackgroundParticles() {
   const count = 1000;
-  // Memoize positions to prevent recalculation on every re-render
-  const positions = useMemo(() => {
-    const pos = new Float32Array(count * 3);
-    for (let i = 0; i < count; i++) {
-      pos[i * 3] = (Math.random() - 0.5) * 10;
-      pos[i * 3 + 1] = (Math.random() - 0.5) * 10;
-      pos[i * 3 + 2] = (Math.random() - 0.5) * 10;
-    }
-    return pos;
-  }, []);
+  const positions = new Float32Array(count * 3);
+  for (let i = 0; i < count; i++) {
+    positions[i * 3] = (Math.random() - 0.5) * 10;
+    positions[i * 3 + 1] = (Math.random() - 0.5) * 10;
+    positions[i * 3 + 2] = (Math.random() - 0.5) * 10;
+  }
 
   const pointsRef = useRef<THREE.Points>(null!);
   useFrame((state) => {
@@ -40,7 +36,7 @@ function BackgroundParticles() {
 function FloatingCore() {
   return (
     <Float speed={2} rotationIntensity={1.5} floatIntensity={2}>
-      <Sphere args={[1, 32, 32]}>
+      <Sphere args={[1, 64, 64]}>
         <MeshDistortMaterial
           color="#0f172a"
           speed={3}
@@ -49,7 +45,7 @@ function FloatingCore() {
           metalness={0.8}
         />
       </Sphere>
-      <Sphere args={[1.1, 32, 32]}>
+      <Sphere args={[1.1, 64, 64]}>
         <meshStandardMaterial
           color="#3b82f6"
           wireframe
@@ -64,11 +60,7 @@ function FloatingCore() {
 export function HeroScene() {
   return (
     <div className="absolute inset-0 -z-10 bg-background">
-      <Canvas 
-        dpr={[1, 2]} 
-        gl={{ powerPreference: "high-performance", antialias: false }}
-        camera={{ position: [0, 0, 5], fov: 75 }}
-      >
+      <Canvas>
         <PerspectiveCamera makeDefault position={[0, 0, 5]} />
         <ambientLight intensity={0.5} />
         <pointLight position={[10, 10, 10]} intensity={1.5} color="#3b82f6" />
