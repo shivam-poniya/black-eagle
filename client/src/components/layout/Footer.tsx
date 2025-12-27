@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { ArrowUpRight } from "lucide-react";
+import logoUrl from "@assets/232707726_1766827485805.png";
 
 export function Footer() {
   return (
@@ -9,9 +10,16 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-24">
           <div className="lg:col-span-4 space-y-8">
-            <h3 className="text-4xl md:text-5xl font-black font-heading tracking-tighter leading-none italic">
-              BLACK EAGLE
-            </h3>
+            <div className="flex items-center gap-4">
+              <img 
+                src={logoUrl} 
+                alt="Black Eagle Logo" 
+                className="w-12 h-12 object-contain brightness-0 invert"
+              />
+              <h3 className="text-4xl md:text-5xl font-black font-heading tracking-tighter leading-none italic">
+                BLACK EAGLE
+              </h3>
+            </div>
             <p className="text-lg text-primary-foreground/60 font-light leading-relaxed max-w-sm">
               The global standard for high-velocity engineering teams. We architect the future of technology by bridging the talent gap for the world's most ambitious companies.
             </p>
