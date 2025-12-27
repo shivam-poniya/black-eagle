@@ -36,29 +36,29 @@ export function Navbar() {
         : "bg-transparent border-transparent py-8"
     )}>
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3 group cursor-pointer">
+        <Link href="/" className="flex items-center gap-4 group cursor-pointer">
           <div className="relative">
             <img 
               src={logoUrl} 
               alt="Black Eagle Logo" 
-              className="w-12 h-12 object-contain transition-transform duration-500 group-hover:scale-110"
+              className="w-14 h-14 object-contain transition-transform duration-500 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-primary/20 blur-lg rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
           </div>
-          <span className="text-2xl font-bold font-heading tracking-tight">
+          <span className="text-[26px] font-bold font-heading tracking-tight">
             BLACK EAGLE
           </span>
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden lg:flex items-center gap-10">
-          <div className="flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-12">
+          <div className="flex items-center gap-10">
             {navLinks.map((link) => (
               <Link 
                 key={link.href} 
                 href={link.href}
                 className={cn(
-                  "text-[10px] font-black uppercase tracking-[0.2em] transition-all hover:text-primary cursor-pointer",
+                  "text-[12px] font-black uppercase tracking-[0.2em] transition-all hover:text-primary cursor-pointer",
                   location === link.href ? "text-primary" : "text-muted-foreground"
                 )}
               >
@@ -67,7 +67,7 @@ export function Navbar() {
             ))}
           </div>
           <Link href="/contact">
-            <Button className="rounded-full px-8 font-black uppercase tracking-widest text-[10px] h-11 bg-primary hover:bg-primary/90 cursor-pointer">
+            <Button className="rounded-full px-10 font-black uppercase tracking-widest text-[12px] h-12 bg-primary hover:bg-primary/90 cursor-pointer">
               Get Started
             </Button>
           </Link>
