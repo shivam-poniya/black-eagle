@@ -36,7 +36,7 @@ export function Navbar() {
         : "bg-transparent py-6"
     )}>
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-4 group cursor-pointer">
+        <Link href="/" className="flex items-center gap-2 group cursor-pointer">
           <div className="relative">
             <img 
               src={logoUrl} 
