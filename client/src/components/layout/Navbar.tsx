@@ -30,22 +30,22 @@ export function Navbar() {
 
   return (
     <nav className={cn(
-      "fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b",
+      "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
       isScrolled
-        ? "bg-background/80 backdrop-blur-xl border-white/5 py-4"
-        : "bg-transparent border-transparent py-8"
+        ? "bg-background/80 backdrop-blur-xl border-b border-white/5 py-3"
+        : "bg-transparent py-6"
     )}>
-      <div className="container mx-auto px-4 h-20 flex items-center justify-between">
+      <div className="container mx-auto px-4 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-4 group cursor-pointer">
           <div className="relative">
             <img 
               src={logoUrl} 
               alt="Black Eagle Logo" 
-              className="w-14 h-14 object-contain transition-transform duration-500 group-hover:scale-110"
+              className="w-16 h-16 object-contain transition-transform duration-500 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-primary/20 blur-lg rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
           </div>
-          <span className="text-[26px] font-bold font-heading tracking-tight">
+          <span className="text-[26px] font-bold font-heading tracking-tight leading-none">
             BLACK EAGLE
           </span>
         </Link>
@@ -66,7 +66,7 @@ export function Navbar() {
               </Link>
             ))}
           </div>
-          <Link href="/contact">
+          <Link href="/contact" className="flex items-center">
             <Button className="rounded-full px-10 font-black uppercase tracking-widest text-[12px] h-12 bg-primary hover:bg-primary/90 cursor-pointer">
               Get Started
             </Button>
