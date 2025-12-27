@@ -32,8 +32,8 @@ export function Navbar() {
     <nav className={cn(
       "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
       isScrolled
-        ? "bg-background/80 backdrop-blur-xl border-b border-white/5 py-3"
-        : "bg-transparent py-6"
+        ? "bg-white/80 backdrop-blur-xl border-b border-gray-100 py-2"
+        : "bg-transparent py-4"
     )}>
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group cursor-pointer">
@@ -41,24 +41,24 @@ export function Navbar() {
             <img 
               src={logoUrl} 
               alt="Black Eagle Logo" 
-              className="w-16 h-16 object-contain transition-transform duration-500 group-hover:scale-110"
+              className="w-8 h-8 object-contain transition-transform duration-500 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-primary/20 blur-lg rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
           </div>
-          <span className="text-[27px] font-bold font-heading tracking-tight leading-none">
+          <span className="text-[20px] font-bold font-heading tracking-tight leading-none">
             BLACK EAGLE
           </span>
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden lg:flex items-center gap-12">
-          <div className="flex items-center gap-10">
+        <div className="hidden lg:flex items-center gap-10">
+          <div className="flex items-center gap-6">
             {navLinks.map((link) => (
               <Link 
                 key={link.href} 
                 href={link.href}
                 className={cn(
-                  "text-[13px] font-black uppercase tracking-[0.2em] transition-all hover:text-primary cursor-pointer",
+                  "text-[11px] font-bold uppercase tracking-[0.15em] transition-all hover:text-primary cursor-pointer",
                   location === link.href ? "text-primary" : "text-muted-foreground"
                 )}
               >
@@ -67,8 +67,8 @@ export function Navbar() {
             ))}
           </div>
           <Link href="/contact" className="flex items-center">
-            <Button className="rounded-full px-10 font-black uppercase tracking-widest text-[13px] h-12 bg-primary hover:bg-primary/90 cursor-pointer">
-              Get Started
+            <Button className="rounded-full px-6 font-bold uppercase tracking-widest text-[11px] h-10 bg-[#0F172A] hover:bg-[#0F172A]/90 text-white cursor-pointer">
+              GET STARTED
             </Button>
           </Link>
         </div>
