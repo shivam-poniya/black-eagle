@@ -16,7 +16,7 @@ export function Footer() {
                 alt="Black Eagle Logo" 
                 className="w-12 h-12 object-contain brightness-0 invert"
               />
-              <h3 className="text-4xl md:text-5xl font-black font-heading tracking-tighter leading-none italic">
+              <h3 className="text-4xl md:text-5xl font-bold font-heading tracking-tight leading-none">
                 BLACK EAGLE
               </h3>
             </div>

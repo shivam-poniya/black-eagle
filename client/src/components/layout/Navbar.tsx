@@ -45,7 +45,7 @@ export function Navbar() {
             />
             <div className="absolute inset-0 bg-primary/20 blur-lg rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
           </div>
-          <span className="text-2xl font-black font-heading tracking-tighter italic">
+          <span className="text-2xl font-bold font-heading tracking-tight">
             BLACK EAGLE
           </span>
         </Link>
