@@ -51,7 +51,7 @@ function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.8 }}
-            className="text-4xl sm:text-7xl md:text-[10rem] font-bold font-heading leading-none mb-8 sm:mb-12 text-foreground tracking-tight whitespace-nowrap overflow-visible"
+            className="text-4xl sm:text-6xl md:text-[9.5rem] font-bold font-heading leading-none mb-8 sm:mb-12 text-foreground tracking-tight whitespace-nowrap overflow-visible"
           >
             BLACK EAGLE
           </motion.h1>
@@ -60,7 +60,7 @@ function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 1 }}
-            className="text-lg sm:text-xl md:text-3xl text-muted-foreground mb-10 sm:mb-16 leading-relaxed max-w-3xl mx-auto font-light tracking-tight"
+            className="text-base sm:text-lg md:text-2xl text-muted-foreground mb-10 sm:mb-16 leading-relaxed max-w-3xl mx-auto font-light tracking-tight"
           >
             Scale your engineering team with elite global talent. <br className="hidden md:block" />
             Pre-vetted, production-ready, and seamlessly integrated.

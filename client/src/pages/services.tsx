@@ -42,10 +42,10 @@ export default function Services() {
           animate={{ opacity: 1, y: 0 }}
         >
           <span className="text-primary font-black tracking-[0.5em] uppercase text-[10px] sm:text-xs mb-6 block">Our Solutions</span>
-          <h1 className="text-4xl sm:text-6xl md:text-9xl font-black font-heading mb-8 md:mb-10 tracking-tighter leading-[0.85]">
+          <h1 className="text-4xl sm:text-5xl md:text-8xl font-black font-heading mb-8 md:mb-10 tracking-tighter leading-[0.85]">
             Enterprise <br/><span className="text-primary italic">Grade</span> Services
           </h1>
-          <p className="text-lg sm:text-2xl md:text-3xl text-muted-foreground font-light leading-relaxed">
+          <p className="text-base sm:text-xl md:text-2xl text-muted-foreground font-light leading-relaxed">
             Flexible global solutions designed to scale your engineering 
             capacity without the operational overhead.
           </p>
