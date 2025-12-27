@@ -41,7 +41,7 @@ export function Navbar() {
             <img 
               src={logoUrl} 
               alt="Black Eagle Logo" 
-              className="w-12 h-12 object-contain transition-transform duration-500 group-hover:scale-110 invert brightness-200"
+              className="w-12 h-12 object-contain transition-transform duration-500 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-primary/20 blur-lg rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
           </div>
