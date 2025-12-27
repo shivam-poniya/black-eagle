@@ -14,9 +14,9 @@ export function Footer() {
               <img 
                 src={logoUrl} 
                 alt="Black Eagle Logo" 
-                className="w-14 h-14 object-contain brightness-0 invert"
+                className="w-16 h-16 object-contain brightness-0 invert"
               />
-              <h3 className="text-[38px] md:text-[46px] font-bold font-heading tracking-tight leading-none">
+              <h3 className="text-[34px] md:text-[42px] font-bold font-heading tracking-tight leading-none">
                 BLACK EAGLE
               </h3>
             </div>
