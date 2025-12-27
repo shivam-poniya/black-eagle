@@ -39,11 +39,11 @@ export default function HowItWorks() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          <span className="text-primary font-black tracking-[0.5em] uppercase text-xs mb-6 block">Methodology</span>
-          <h1 className="text-6xl md:text-9xl font-black font-heading mb-10 tracking-tighter leading-[0.85]">
+          <span className="text-primary font-black tracking-[0.5em] uppercase text-[10px] sm:text-xs mb-6 block">Methodology</span>
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-black font-heading mb-6 md:mb-8 tracking-tighter leading-[0.85]">
             Precision <br/><span className="text-primary italic">Process</span>
           </h1>
-          <p className="text-2xl md:text-3xl text-muted-foreground font-light leading-relaxed">
+          <p className="text-sm sm:text-lg md:text-xl text-muted-foreground font-light leading-relaxed">
             A high-velocity engagement model designed for startups 
             and enterprises that don't compromise on quality.
           </p>
@@ -67,9 +67,9 @@ export default function HowItWorks() {
                 </div>
               </div>
               <div className="w-full md:w-1/2 space-y-8">
-                <span className="text-7xl font-black font-heading text-primary/10">{step.num}</span>
-                <h3 className="text-4xl md:text-6xl font-black font-heading tracking-tighter leading-none">{step.title}</h3>
-                <p className="text-2xl text-muted-foreground font-light leading-relaxed">{step.desc}</p>
+                <span className="text-5xl font-black font-heading text-primary/10">{step.num}</span>
+                <h3 className="text-3xl md:text-4xl font-black font-heading tracking-tighter leading-none">{step.title}</h3>
+                <p className="text-lg text-muted-foreground font-light leading-relaxed">{step.desc}</p>
                 <div className="w-12 h-1 bg-primary" />
               </div>
             </motion.div>
@@ -89,16 +89,16 @@ export default function HowItWorks() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="p-12 bg-card/30 backdrop-blur-xl rounded-[3rem] border border-border/50 text-center"
+              className="p-8 bg-card/30 backdrop-blur-xl rounded-[2.5rem] border border-border/50 text-center"
             >
-              <h4 className="text-xl font-black tracking-tight">{benefit}</h4>
+              <h4 className="text-lg font-black tracking-tight">{benefit}</h4>
             </motion.div>
           ))}
         </div>
 
         <div className="text-center">
           <Link href="/contact">
-            <Button size="lg" className="h-24 px-16 text-2xl rounded-full shadow-2xl">Start Your Search</Button>
+            <Button size="lg" className="h-16 px-12 text-lg rounded-full shadow-2xl">Start Your Search</Button>
           </Link>
         </div>
       </div>

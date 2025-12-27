@@ -42,10 +42,10 @@ export default function Services() {
           animate={{ opacity: 1, y: 0 }}
         >
           <span className="text-primary font-black tracking-[0.5em] uppercase text-[10px] sm:text-xs mb-6 block">Our Solutions</span>
-          <h1 className="text-4xl sm:text-5xl md:text-8xl font-black font-heading mb-8 md:mb-10 tracking-tighter leading-[0.85]">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-black font-heading mb-6 md:mb-8 tracking-tighter leading-[0.85]">
             Enterprise <br/><span className="text-primary italic">Grade</span> Services
           </h1>
-          <p className="text-base sm:text-xl md:text-2xl text-muted-foreground font-light leading-relaxed">
+          <p className="text-sm sm:text-lg md:text-xl text-muted-foreground font-light leading-relaxed">
             Flexible global solutions designed to scale your engineering 
             capacity without the operational overhead.
           </p>
@@ -59,28 +59,28 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1, duration: 0.8 }}
-              className="group bg-card/30 backdrop-blur-2xl border border-border/50 p-12 md:p-16 rounded-[4rem] hover:bg-primary transition-all duration-700 hover:-translate-y-4 shadow-2xl shadow-transparent hover:shadow-primary/20"
+              className="group bg-card/30 backdrop-blur-2xl border border-border/50 p-10 md:p-12 rounded-[3rem] hover:bg-primary transition-all duration-700 hover:-translate-y-4 shadow-2xl shadow-transparent hover:shadow-primary/20"
             >
-              <div className="flex justify-between items-start mb-12">
-                <div className="w-20 h-20 bg-primary/10 rounded-[2rem] flex items-center justify-center group-hover:bg-white/20 transition-all duration-500">
-                  <service.icon className="w-10 h-10 text-primary group-hover:text-white" />
+              <div className="flex justify-between items-start mb-10">
+                <div className="w-16 h-16 bg-primary/10 rounded-[1.5rem] flex items-center justify-center group-hover:bg-white/20 transition-all duration-500">
+                  <service.icon className="w-8 h-8 text-primary group-hover:text-white" />
                 </div>
-                <span className="text-6xl font-black opacity-10 group-hover:opacity-20 font-heading">0{idx + 1}</span>
+                <span className="text-4xl font-black opacity-10 group-hover:opacity-20 font-heading">0{idx + 1}</span>
               </div>
-              <h3 className="text-4xl font-black mb-6 tracking-tighter group-hover:text-white transition-colors">{service.title}</h3>
-              <p className="text-xl text-muted-foreground group-hover:text-white/80 mb-12 leading-relaxed transition-colors">
+              <h3 className="text-3xl font-black mb-4 tracking-tighter group-hover:text-white transition-colors">{service.title}</h3>
+              <p className="text-lg text-muted-foreground group-hover:text-white/80 mb-10 leading-relaxed transition-colors">
                 {service.desc}
               </p>
-              <ul className="space-y-4 mb-12">
+              <ul className="space-y-3 mb-10">
                 {service.features.map((feature, fIdx) => (
-                  <li key={fIdx} className="flex items-center gap-4 text-lg group-hover:text-white transition-colors">
-                    <div className="w-2 h-2 rounded-full bg-primary group-hover:bg-white" />
+                  <li key={fIdx} className="flex items-center gap-3 text-base group-hover:text-white transition-colors">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary group-hover:bg-white" />
                     {feature}
                   </li>
                 ))}
               </ul>
               <Link href="/contact">
-                <Button variant="outline" className="w-full h-16 rounded-full border-border group-hover:border-white group-hover:bg-white group-hover:text-primary transition-all text-lg font-bold">
+                <Button variant="outline" className="w-full h-14 rounded-full border-border group-hover:border-white group-hover:bg-white group-hover:text-primary transition-all text-base font-bold">
                   Learn More
                 </Button>
               </Link>
@@ -92,16 +92,16 @@ export default function Services() {
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="bg-primary p-16 md:p-32 rounded-[5rem] text-primary-foreground text-center relative overflow-hidden"
+          className="bg-primary p-12 md:p-24 rounded-[4rem] text-primary-foreground text-center relative overflow-hidden"
         >
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white/10 to-transparent" />
-          <h2 className="text-5xl md:text-7xl font-black font-heading mb-10 tracking-tighter relative z-10">Architecting Your <br/>Success</h2>
-          <p className="text-2xl text-primary-foreground/80 mb-16 max-w-3xl mx-auto relative z-10">
+          <h2 className="text-4xl md:text-6xl font-black font-heading mb-8 tracking-tighter relative z-10">Architecting Your <br/>Success</h2>
+          <p className="text-xl text-primary-foreground/80 mb-12 max-w-3xl mx-auto relative z-10">
             Let's discuss a tailored engagement model that fits your unique 
             technical roadmap and business objectives.
           </p>
           <Link href="/contact">
-            <Button size="lg" variant="secondary" className="h-24 px-16 text-2xl rounded-full shadow-2xl relative z-10 hover:scale-105 transition-transform">
+            <Button size="lg" variant="secondary" className="h-20 px-14 text-xl rounded-full shadow-2xl relative z-10 hover:scale-105 transition-transform">
               Connect With Us
             </Button>
           </Link>
