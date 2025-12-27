@@ -13,10 +13,10 @@ export default function Pricing() {
           animate={{ opacity: 1, y: 0 }}
         >
           <span className="text-primary font-black tracking-[0.5em] uppercase text-[10px] sm:text-xs mb-6 block">Investment Models</span>
-          <h1 className="text-4xl sm:text-5xl md:text-8xl font-black font-heading mb-8 md:mb-10 tracking-tighter leading-[0.85]">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-black font-heading mb-6 md:mb-8 tracking-tighter leading-[0.85]">
             Flexible <br/><span className="text-primary italic">Pricing</span>
           </h1>
-          <p className="text-base sm:text-xl md:text-2xl text-muted-foreground font-light max-w-2xl mx-auto">
+          <p className="text-sm sm:text-lg md:text-xl text-muted-foreground font-light max-w-2xl mx-auto">
             Every business is unique—our pricing adapts to your needs.
           </p>
         </motion.div>

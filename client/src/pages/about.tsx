@@ -14,10 +14,10 @@ export default function About() {
             transition={{ duration: 0.8 }}
           >
             <span className="text-primary font-black tracking-[0.5em] uppercase text-[10px] sm:text-xs mb-6 block">Our DNA</span>
-            <h1 className="text-4xl sm:text-5xl md:text-8xl font-black font-heading mb-8 md:mb-12 tracking-tighter leading-[0.85]">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-black font-heading mb-6 md:mb-8 tracking-tighter leading-[0.85]">
               Built for <br/><span className="text-primary italic">Velocity</span>
             </h1>
-            <p className="text-base sm:text-xl md:text-2xl text-muted-foreground font-light leading-relaxed mb-12">
+            <p className="text-sm sm:text-lg md:text-xl text-muted-foreground font-light leading-relaxed mb-10">
               We are a technology-driven Global IT Solutions firm committed 
               to helping businesses build high-performing engineering teams worldwide.
             </p>
