@@ -4,7 +4,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
-import logoUrl from "@assets/232707726_1766827485805.png";
+import logoUrl from "@assets/232707726_(1)_1766828132946.png";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -41,7 +41,7 @@ export function Navbar() {
             <img 
               src={logoUrl} 
               alt="Black Eagle Logo" 
-              className="w-12 h-12 object-contain transition-transform duration-500 group-hover:scale-110"
+              className="w-12 h-12 object-contain transition-transform duration-500 group-hover:scale-110 invert brightness-200"
             />
             <div className="absolute inset-0 bg-primary/20 blur-lg rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
           </div>

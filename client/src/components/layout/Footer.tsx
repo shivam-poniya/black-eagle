@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { ArrowUpRight } from "lucide-react";
-import logoUrl from "@assets/232707726_1766827485805.png";
+import logoUrl from "@assets/232707726_(1)_1766828132946.png";
 
 export function Footer() {
   return (
@@ -14,7 +14,7 @@ export function Footer() {
               <img 
                 src={logoUrl} 
                 alt="Black Eagle Logo" 
-                className="w-12 h-12 object-contain"
+                className="w-12 h-12 object-contain invert brightness-200"
               />
               <h3 className="text-4xl md:text-5xl font-bold font-heading tracking-tight leading-none">
                 BLACK EAGLE
