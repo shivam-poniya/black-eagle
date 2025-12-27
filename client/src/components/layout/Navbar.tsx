@@ -36,23 +36,18 @@ export function Navbar() {
         : "bg-transparent border-transparent py-8"
     )}>
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-4 group cursor-pointer">
-          <div className="relative flex items-center justify-center">
+        <Link href="/" className="flex items-center gap-3 group cursor-pointer">
+          <div className="relative">
             <img 
               src={logoUrl} 
               alt="Black Eagle Logo" 
-              className="w-12 h-12 object-contain transition-all duration-700 group-hover:scale-110 group-hover:rotate-[360deg]"
+              className="w-12 h-12 object-contain transition-transform duration-500 group-hover:scale-110"
             />
-            <div className="absolute inset-0 bg-primary/10 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+            <div className="absolute inset-0 bg-primary/20 blur-lg rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
           </div>
-          <div className="flex flex-col -space-y-1">
-            <span className="text-2xl font-black font-heading tracking-[0.15em] leading-none text-foreground uppercase">
-              Black Eagle
-            </span>
-            <span className="text-[8px] font-bold tracking-[0.6em] uppercase text-primary/60 ml-0.5">
-              Elite Engineering
-            </span>
-          </div>
+          <span className="text-2xl font-bold font-heading tracking-tight">
+            BLACK EAGLE
+          </span>
         </Link>
 
         {/* Desktop Nav */}
