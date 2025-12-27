@@ -45,7 +45,7 @@ export function Navbar() {
             />
             <div className="absolute inset-0 bg-primary/20 blur-lg rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
           </div>
-          <span className="text-[26px] font-bold font-heading tracking-tight leading-none">
+          <span className="text-[29px] font-bold font-heading tracking-tight leading-none">
             BLACK EAGLE
           </span>
         </Link>
@@ -58,7 +58,7 @@ export function Navbar() {
                 key={link.href} 
                 href={link.href}
                 className={cn(
-                  "text-[12px] font-black uppercase tracking-[0.2em] transition-all hover:text-primary cursor-pointer",
+                  "text-[15px] font-black uppercase tracking-[0.2em] transition-all hover:text-primary cursor-pointer",
                   location === link.href ? "text-primary" : "text-muted-foreground"
                 )}
               >
@@ -67,7 +67,7 @@ export function Navbar() {
             ))}
           </div>
           <Link href="/contact" className="flex items-center">
-            <Button className="rounded-full px-10 font-black uppercase tracking-widest text-[12px] h-12 bg-primary hover:bg-primary/90 cursor-pointer">
+            <Button className="rounded-full px-12 font-black uppercase tracking-widest text-[15px] h-14 bg-primary hover:bg-primary/90 cursor-pointer">
               Get Started
             </Button>
           </Link>
