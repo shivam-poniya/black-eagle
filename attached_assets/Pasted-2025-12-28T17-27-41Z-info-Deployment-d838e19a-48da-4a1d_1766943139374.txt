@@ -1,0 +1,97 @@
+2025-12-28T17:27:41Z info: Deployment: d838e19a-48da-4a1d-93b6-98a83e31b350
+2025-12-28T17:27:41Z info: Build: 264dd211-c42e-4429-98c0-cf5479664713
+2025-12-28T17:27:41Z info: Running Security Scan
+2025-12-28T17:27:41Z info: Security Scan Complete
+2025-12-28T17:27:41Z info: Connecting to builder
+2025-12-28T17:27:42Z info: Builder connected
+2025-12-28T17:27:42Z info: Installing packages
+2025-12-28T17:27:42Z info: Starting Build
+
+> rest-express@1.0.0 build
+> tsx script/build.ts
+
+
+building client...
+
+vite v7.1.12 building for production...
+
+transforming...
+
+✓ 46 modules transformed.
+
+✗ Build failed in 1.52s
+
+[vite:css] [postcss] ENOENT: no such file or directory, open '/home/runner/workspace/attached_assets/generated_images/minimalist_high_tech_dark_background.png'
+file: /home/runner/workspace/client/src/index.css:undefined:NaN
+    at async open (node:internal/fs/promises:639:25)
+    at async Object.readFile (node:internal/fs/promises:1246:14)
+    at async fileToBuiltUrl (/home/runner/workspace/node_modules/vite/dist/node/chunks/config.js:7526:18)
+    at async Object.urlResolver (/home/runner/workspace/node_modules/vite/dist/node/chunks/config.js:31487:19)
+    at async replacerForDeclaration (/home/runner/workspace/node_modules/vite/dist/node/chunks/config.js:32206:36)
+    at async doUrlReplace (/home/runner/workspace/node_modules/vite/dist/node/chunks/config.js:32265:15)
+    at async <anonymous> (/home/runner/workspace/node_modules/vite/dist/node/chunks/config.js:32226:10)
+    at async asyncReplace (/home/runner/workspace/node_modules/vite/dist/node/chunks/config.js:2176:16)
+    at async Promise.all (index 0)
+    at async LazyResult.runAsync (/home/runner/workspace/node_modules/postcss/lib/lazy-result.js:293:11) {
+  errno: -2,
+  code: 'PLUGIN_ERROR',
+  syscall: 'open',
+  path: '/home/runner/workspace/attached_assets/generated_images/minimalist_high_tech_dark_background.png',
+  loc: { file: undefined, line: undefined, column: NaN },
+  pluginCode: '/*! tailwindcss v4.1.16 | MIT License | https://tailwindcss.com */\n' +
+    '@layer properties{@supports (((-webkit-hyphens:none)) and (not (margin-trim:inline))) or ((-moz-orient:inline) and (not (color:rgb(from red r g b)))){*,:before,:after,::backdrop{--tw-translate-x:0;--tw-translate-y:0;--tw-translate-z:0;--tw-rotate-x:initial;--tw-rotate-y:initial;--tw-rotate-z:initial;--tw-skew-x:initial;--tw-skew-y:initial;--tw-space-y-reverse:0;--tw-space-x-reverse:0;--tw-border-style:solid;--tw-gradient-position:initial;--tw-gradient-from:#0000;--tw-gradient-via:#0000;--tw-gradient-to:#0000;--tw-gradient-stops:initial;--tw-gradient-via-stops:initial;--tw-gradient-from-position:0%;--tw-gradient-via-position:50%;--tw-gradient-to-position:100%;--tw-leading:initial;--tw-font-weight:initial;--tw-tracking:initial;--tw-ordinal:initial;--tw-slashed-zero:initial;--tw-numeric-figure:initial;--tw-numeric-spacing:initial;--tw-numeric-fraction:initial;--tw-shadow:0 0 #0000;--tw-shadow-color:initial;--tw-shadow-alpha:100%;--tw-inset-shadow:0 0 #0000;--tw-inset-shadow-color:initial;--tw-inset-shadow-alpha:100%;--tw-ring-color:initial;--tw-ring-shadow:0 0 #0000;--tw-inset-ring-color:initial;--tw-inset-ring-shadow:0 0 #0000;--tw-ring-inset:initial;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-offset-shadow:0 0 #0000;--tw-outline-style:solid;--tw-blur:initial;--tw-brightness:initial;--tw-contrast:initial;--tw-grayscale:initial;--tw-hue-rotate:initial;--tw-invert:initial;--tw-opacity:initial;--tw-saturate:initial;--tw-sepia:initial;--tw-drop-shadow:initial;--tw-drop-shadow-color:initial;--tw-drop-shadow-alpha:100%;--tw-drop-shadow-size:initial;--tw-backdrop-blur:initial;--tw-backdrop-brightness:initial;--tw-backdrop-contrast:initial;--tw-backdrop-grayscale:initial;--tw-backdrop-hue-rotate:initial;--tw-backdrop-invert:initial;--tw-backdrop-opacity:initial;--tw-backdrop-saturate:initial;--tw-backdrop-sepia:initial;--tw-duration:initial;--tw-ease:initial;--tw-scale-x:1;--tw-scale-y:1;--tw-scale-z:1;--tw-content:"";--tw-animation-delay:0s;--tw-animation-direction:normal;--tw-animation-duration:initial;--tw-animation-fill-mode:none;--tw-animation-iteration-count:1;--tw-enter-blur:0;--tw-enter-opacity:1;--tw-enter-rotate:0;--tw-enter-scale:1;--tw-enter-translate-x:0;--tw-enter-translate-y:0;--tw-exit-blur:0;--tw-exit-opacity:1;--tw-exit-rotate:0;--tw-exit-scale:1;--tw-exit-translate-x:0;--tw-exit-translate-y:0}}}@layer theme{:root,:host{--font-mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;--color-red-50:oklch(97.1% .013 17.38);--color-red-300:oklch(80.8% .114 19.571);--color-red-400:oklch(70.4% .191 22.216);--color-red-500:oklch(63.7% .237 25.3
+round-color:#0000;border-radius:0}:where(select:is([multiple],[size])) optgroup{font-weight:bolder}:where(select:is([multiple],[size])) optgroup option{padding-inline-start:20px}::file-selector-button{margin-inline-end:4px}::placeholder{opacity:1}@supports (not ((-webkit-appearance:-apple-pay-button))) or (contain-intrinsic-size:1px){::placeholder{color:currentColor}@supports (color:color-mix(in lab, red, red)){::placeholder{color:color-mix(in oklab,currentcolor 50%,transparent)}}}textarea{resize:vertical}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-date-and-time-value{min-height:1lh;text-align:inherit}::-webkit-datetime-edit{display:inline-flex}::-webkit-datetime-edit-fields-wrapper{padding:0}::-webkit-datetime-edit{padding-block:0}::-webkit-datetime-edit-year-field{padding-block:0}::-webkit-datetime-edit-month-field{padding-block:0}::-webkit-datetime-edit-day-field{padding-block:0}::-webkit-datetime-edit-hour-field{padding-block:0}::-webkit-datetime-edit-minute-field{padding-block:0}::-webkit-datetime-edit-second-field{padding-block:0}::-webkit-datetime-edit-millisecond-field{padding-block:0}::-webkit-datetime-edit-meridiem-field{padding-block:0}::-webkit-calendar-picker-indicator{line-height:1}:-moz-ui-invalid{box-shadow:none}button,input:where([type=button],[type=reset],[type=submit]){appearance:button}::file-selector-button{appearance:button}::-webkit-inner-spin-button{height:auto}::-webkit-outer-spin-button{height:auto}[hidden]:where(:not([hidden=until-found])){display:none!important}*{border-color:hsl(var(--border))}body{background-color:hsl(var(--background));color:hsl(var(--foreground));-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;background-position:50%;background-size:cover;background-attachment:fixed;background-image:var(--landing-bg);font-family:Inter,sans-serif}h1,h2,h3,h4,h5,h6{--tw-font-weight:var(--font-weight-bold);font-family:Plus Jakarta Sans,sans-serif;font-weight:var(--font-weight-bold);--tw-tracking:var(--tracking-tight);letter-spacing:var(--tracking-tight)}}@layer components;@layer utilities{.\\@container\\/field-group{container:field-group/inline-size}.pointer-events-auto{pointer-events:auto}.pointer-events-none{pointer-events:none}.invisible{visibility:hidden}.sr-only{clip-path:inset(50%);white-space:nowrap;border-width:0;width:1px;height:1px;margin:-1px;padding:0;position:absolute;overflow:hidden}.absolute{position:absolute}.fixed{position:fixed}.relative{position:relative}.inset-0{inset:calc(var(--spacing)*0)}.inset-x-0{inset-inline:calc(var(--spacing)*0)}.inset-y-0{inset-block:calc(var(--spacing)*0)}.-top-12{top:calc(var(--spacing)*-12)}.top-0{top:calc(var(--spacing)*0)}.top-1\\.5{top:calc(var(--spacing)*1.5)}.top-1\\/2{top:50%}.top-2{top:calc(var(--spacing)*2)}.top-3\\.5{top:calc(var(--spacing)*3.5)}.top-4{top:calc(var(--spacing)*4)}.top-12{top:calc(var(--spacing)*12)}.top-\\[-10\\%\\]{top:-10%}.top-\\[1px\\]{top:1px}.top-\\[50\\%\\]{top:50%}.top-\\[60\\%\\]{top:60%}.top-full{top:100%}.-right-12{right:calc(var(--spacing)*-12)}.right-0{right:calc(var(--spacing)*0)}.right-1{right:calc(var(--spacing)*1)}.right-2{right:calc(var(--spacing)*2)}.right-3{right:calc(var(--spacing)*'... 108311 more characters,
+  plugin: 'vite:css',
+  hook: 'transform',
+  id: '/home/runner/workspace/client/src/index.css',
+  watchFiles: [
+    '/home/runner/workspace/client/index.html',
+    '/home/runner/workspace/client/src/main.tsx',
+    '/home/runner/workspace/package.json',
+    '/home/runner/workspace/node_modules/react/jsx-runtime.js',
+    '/home/runner/workspace/client/src/App.tsx',
+    '/home/runner/workspace/node_modules/react-dom/client.js',
+    '/home/runner/workspace/client/src/index.css',
+    '/home/runner/workspace/node_modules/tailwindcss/index.css',
+    '/home/runner/workspace/node_modules/tw-animate-css/dist/tw-animate.css',
+    '/home/runner/workspace/node_modules/react/cjs/react-jsx-runtime.production.js',
+    '/home/runner/workspace/node_modules/wouter/esm/index.js',
+    '/home/runner/workspace/node_modules/@tanstack/react-query/build/modern/index.js',
+    '/hom
+',
+    '/home/runner/workspace/client/src/components/ui/toggle.tsx',
+    '/home/runner/workspace/client/src/components/ui/button.tsx',
+    '/home/runner/workspace/client/src/components/ui/tabs.tsx',
+    '/home/runner/workspace/client/src/components/ui/breadcrumb.tsx',
+    '/home/runner/workspace/client/src/components/ui/carousel.tsx',
+    '/home/runner/workspace/client/src/components/ui/button-group.tsx',
+    '/home/runner/workspace/client/src/components/three/HeroScene.tsx',
+    '/home/runner/workspace/client/src/lib/utils.ts',
+    '*',
+    'src/**/*.{aspx,astro,cjs,css,cts,eex,erb,gjs,gts,haml,handlebars,hbs,heex,html,jade,js,jsx,liquid,md,mdx,mjs,mts,mustache,njk,nunjucks,php,pug,py,razor,rb,rhtml,rs,slim,svelte,tpl,ts,tsx,twig,vue}',
+    '/home/runner/workspace/node_modules/regexparam/dist/index.mjs',
+    '/home/runner/workspace/node_modules/@tanstack/query-core/build/modern/index.js',
+    '/home/runner/workspace/node_modules/wouter/esm/use-browser-location.js',
+    '/home/runner/workspace/node_modules/wouter/esm/react-deps.js',
+    '/home/runner/workspace/node_modules/@tanstack/react-query/build/modern/types.js',
+    '/home/runner/workspace/node_modules/@tanstack/react-query/build/modern/useQuery.js',
+    '/home/runner/workspace/node_modules/@tanstack/react-query/build/modern/useSuspenseInfiniteQuery.js',
+    '/home/runner/workspace/node_modules/@tanstack/react-query/build/modern/useSuspenseQuery.js',
+    '/home/runner/workspace/node_modules/@tanstack/react-query/build/modern/useSuspenseQueries.js',
+    '/home/runner/workspace/node_modules/@tanstack/react-query/build/modern/usePrefetchQuery.js',
+    '/home/runner/workspace/node_modules/@tanstack/react-query/build/modern/usePrefetchInfiniteQuery.js',
+    '/home/runner/workspace/node_modules/@tanstack/react-query/build/modern/infiniteQueryOptions.js',
+    '/home/runner/workspace/node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js',
+    '/home/runner/workspace/node_modules/@tanstack/react-query/build/modern/HydrationBoundary.js',
+    '/home/runner/workspace/node_modules/@tanstack/react-query/build/modern/QueryErrorResetBoundary.js',
+    '/home/runner/workspace/node_modules/@tanstack/react-query/build/modern/useIsFetching.js',
+    ... 7 more items
+  ]
+}
+
+npm notice
+npm notice New major version of npm available! 10.8.2 -> 11.7.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.7.0
+npm notice To update run: npm install -g npm@11.7.0
+npm notice
+
