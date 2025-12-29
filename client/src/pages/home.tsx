@@ -296,32 +296,70 @@ export default function Home() {
           <p className="text-center text-[10px] font-black uppercase tracking-[0.5em] text-muted-foreground">Trusted by Fortune 500 & Industry Leaders</p>
         </div>
         
-        <div className="relative flex overflow-hidden">
-          <motion.div 
-            animate={{ x: [0, -1000] }}
-            transition={{ 
-              duration: 30, 
-              repeat: Infinity, 
-              ease: "linear" 
-            }}
-            className="flex whitespace-nowrap gap-24 items-center py-4"
-          >
-            {[
-              "McKesson", "Comcast", "Netflix", "Fannie Mae",
-              "Shef", "Turing Labs Inc.", "Broccoli AI", "Confido", 
-              "Nextera Robotics", "Global Bank", "Stellar AI", "Vertex Systems",
-              "McKesson", "Comcast", "Netflix", "Fannie Mae",
-              "Shef", "Turing Labs Inc.", "Broccoli AI", "Confido", 
-              "Nextera Robotics", "Global Bank", "Stellar AI", "Vertex Systems"
-            ].map((name, idx) => (
-              <span 
-                key={idx} 
-                className="text-2xl md:text-5xl font-black font-heading tracking-tighter text-foreground/30 hover:text-primary transition-colors cursor-default"
-              >
-                {name}
-              </span >
-            ))}
-          </motion.div>
+        <div className="space-y-12">
+          {/* Row 1: Forward */}
+          <div className="relative flex overflow-hidden">
+            <motion.div 
+              animate={{ x: [0, -2000] }}
+              transition={{ 
+                duration: 40, 
+                repeat: Infinity, 
+                ease: "linear" 
+              }}
+              className="flex whitespace-nowrap gap-16 md:gap-24 items-center"
+            >
+              {[
+                "McKesson", "Comcast", "Netflix", "Fannie Mae",
+                "Shef", "Turing Labs Inc.", "Broccoli AI", "Confido", 
+                "Nextera Robotics", "Global Bank", "Stellar AI", "Vertex Systems",
+                "McKesson", "Comcast", "Netflix", "Fannie Mae",
+                "Shef", "Turing Labs Inc.", "Broccoli AI", "Confido", 
+                "Nextera Robotics", "Global Bank", "Stellar AI", "Vertex Systems",
+                "McKesson", "Comcast", "Netflix", "Fannie Mae",
+                "Shef", "Turing Labs Inc.", "Broccoli AI", "Confido", 
+                "Nextera Robotics", "Global Bank", "Stellar AI", "Vertex Systems"
+              ].map((name, idx) => (
+                <span 
+                  key={idx} 
+                  className="text-2xl md:text-6xl font-black font-heading tracking-tighter text-foreground/20 hover:text-primary transition-colors cursor-default"
+                >
+                  {name}
+                </span >
+              ))}
+            </motion.div>
+          </div>
+
+          {/* Row 2: Backward */}
+          <div className="relative flex overflow-hidden">
+            <motion.div 
+              animate={{ x: [-2000, 0] }}
+              transition={{ 
+                duration: 50, 
+                repeat: Infinity, 
+                ease: "linear" 
+              }}
+              className="flex whitespace-nowrap gap-16 md:gap-24 items-center"
+            >
+              {[
+                "Apollo Global", "Rocket Health", "Nova FinTech", "Pulse AI",
+                "Zenith Cloud", "Aether Robotics", "Core Logic", "Summit Tech",
+                "Black Eagle", "Fortune 500", "YC Alum", "Elite Devs",
+                "Apollo Global", "Rocket Health", "Nova FinTech", "Pulse AI",
+                "Zenith Cloud", "Aether Robotics", "Core Logic", "Summit Tech",
+                "Black Eagle", "Fortune 500", "YC Alum", "Elite Devs",
+                "Apollo Global", "Rocket Health", "Nova FinTech", "Pulse AI",
+                "Zenith Cloud", "Aether Robotics", "Core Logic", "Summit Tech",
+                "Black Eagle", "Fortune 500", "YC Alum", "Elite Devs"
+              ].map((name, idx) => (
+                <span 
+                  key={idx} 
+                  className="text-2xl md:text-6xl font-black font-heading tracking-tighter text-foreground/10 hover:text-primary transition-colors cursor-default italic"
+                >
+                  {name}
+                </span >
+              ))}
+            </motion.div>
+          </div>
         </div>
 
         <div className="absolute top-0 left-0 w-40 h-full bg-gradient-to-r from-muted/30 to-transparent z-10" />
