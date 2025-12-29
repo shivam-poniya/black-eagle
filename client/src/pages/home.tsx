@@ -293,67 +293,60 @@ export default function Home() {
       {/* Infinite Logo Marquee */}
       <section className="py-32 bg-muted/30 relative overflow-hidden">
         <div className="container mx-auto px-4 relative z-20 mb-16">
-          <p className="text-center text-[10px] font-black uppercase tracking-[0.5em] text-muted-foreground">Trusted by Fortune 500 & Industry Leaders</p>
+          <p className="text-center text-xs md:text-sm font-black uppercase tracking-[0.5em] text-muted-foreground">Trusted by Fortune 500 & YC Startups</p>
         </div>
         
         <div className="space-y-12">
-          {/* Row 1: Forward */}
-          <div className="relative flex overflow-hidden">
+          {/* Row 1: Forward - Fortune 500 & Major Tech */}
+          <div className="relative flex overflow-hidden border-y border-border/20 py-8 md:py-12 bg-background/20 backdrop-blur-sm">
             <motion.div 
               animate={{ x: [0, -2000] }}
-              transition={{ 
-                duration: 40, 
-                repeat: Infinity, 
-                ease: "linear" 
-              }}
-              className="flex whitespace-nowrap gap-16 md:gap-24 items-center"
-            >
-              {[
-                "McKesson", "Comcast", "Netflix", "Fannie Mae",
-                "Shef", "Turing Labs Inc.", "Broccoli AI", "Confido", 
-                "Nextera Robotics", "Global Bank", "Stellar AI", "Vertex Systems",
-                "McKesson", "Comcast", "Netflix", "Fannie Mae",
-                "Shef", "Turing Labs Inc.", "Broccoli AI", "Confido", 
-                "Nextera Robotics", "Global Bank", "Stellar AI", "Vertex Systems",
-                "McKesson", "Comcast", "Netflix", "Fannie Mae",
-                "Shef", "Turing Labs Inc.", "Broccoli AI", "Confido", 
-                "Nextera Robotics", "Global Bank", "Stellar AI", "Vertex Systems"
-              ].map((name, idx) => (
-                <span 
-                  key={idx} 
-                  className="text-2xl md:text-6xl font-black font-heading tracking-tighter text-foreground/20 hover:text-primary transition-colors cursor-default"
-                >
-                  {name}
-                </span >
-              ))}
-            </motion.div>
-          </div>
-
-          {/* Row 2: Backward */}
-          <div className="relative flex overflow-hidden">
-            <motion.div 
-              animate={{ x: [-2000, 0] }}
               transition={{ 
                 duration: 50, 
                 repeat: Infinity, 
                 ease: "linear" 
               }}
-              className="flex whitespace-nowrap gap-16 md:gap-24 items-center"
+              className="flex whitespace-nowrap gap-16 md:gap-32 items-center"
             >
               {[
-                "Apollo Global", "Rocket Health", "Nova FinTech", "Pulse AI",
-                "Zenith Cloud", "Aether Robotics", "Core Logic", "Summit Tech",
-                "Black Eagle", "Fortune 500", "YC Alum", "Elite Devs",
-                "Apollo Global", "Rocket Health", "Nova FinTech", "Pulse AI",
-                "Zenith Cloud", "Aether Robotics", "Core Logic", "Summit Tech",
-                "Black Eagle", "Fortune 500", "YC Alum", "Elite Devs",
-                "Apollo Global", "Rocket Health", "Nova FinTech", "Pulse AI",
-                "Zenith Cloud", "Aether Robotics", "Core Logic", "Summit Tech",
-                "Black Eagle", "Fortune 500", "YC Alum", "Elite Devs"
+                "McKesson", "Comcast", "Netflix", "Fannie Mae",
+                "Microsoft", "Salesforce", "Uber", "Airbnb",
+                "McKesson", "Comcast", "Netflix", "Fannie Mae",
+                "Microsoft", "Salesforce", "Uber", "Airbnb",
+                "McKesson", "Comcast", "Netflix", "Fannie Mae"
               ].map((name, idx) => (
                 <span 
                   key={idx} 
-                  className="text-2xl md:text-6xl font-black font-heading tracking-tighter text-foreground/10 hover:text-primary transition-colors cursor-default italic"
+                  className="text-3xl md:text-7xl font-black font-heading tracking-tighter text-foreground/20 hover:text-primary transition-all duration-500 cursor-default hover:scale-110"
+                >
+                  {name}
+                </span >
+              ))}
+            </motion.div>
+          </div>
+
+          {/* Row 2: Backward - Real YC Startups */}
+          <div className="relative flex overflow-hidden">
+            <motion.div 
+              animate={{ x: [-2000, 0] }}
+              transition={{ 
+                duration: 60, 
+                repeat: Infinity, 
+                ease: "linear" 
+              }}
+              className="flex whitespace-nowrap gap-16 md:gap-32 items-center"
+            >
+              {[
+                "Shef", "Turing Labs Inc.", "Broccoli AI", "Confido", 
+                "Nextera Robotics", "Doordash", "Stripe", "Instacart",
+                "Reddit", "Coinbase", "Dropbox", "GitLab",
+                "Shef", "Turing Labs Inc.", "Broccoli AI", "Confido", 
+                "Nextera Robotics", "Doordash", "Stripe", "Instacart",
+                "Reddit", "Coinbase", "Dropbox", "GitLab"
+              ].map((name, idx) => (
+                <span 
+                  key={idx} 
+                  className="text-2xl md:text-6xl font-black font-heading tracking-tighter text-foreground/10 hover:text-primary transition-all duration-500 cursor-default italic hover:scale-105"
                 >
                   {name}
                 </span >
@@ -362,8 +355,8 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="absolute top-0 left-0 w-40 h-full bg-gradient-to-r from-muted/30 to-transparent z-10" />
-        <div className="absolute top-0 right-0 w-40 h-full bg-gradient-to-l from-muted/30 to-transparent z-10" />
+        <div className="absolute top-0 left-0 w-40 h-full bg-gradient-to-r from-muted/30 via-muted/10 to-transparent z-10" />
+        <div className="absolute top-0 right-0 w-40 h-full bg-gradient-to-l from-muted/30 via-muted/10 to-transparent z-10" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-primary/5 blur-[120px] rounded-full -z-10" />
       </section>
 
