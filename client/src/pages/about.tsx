@@ -21,8 +21,8 @@ export default function About() {
               We are a technology-driven Global IT Solutions firm committed 
               to helping businesses build high-performing engineering teams worldwide.
             </p>
-            <Link href="/contact">
-                <Button size="lg" className="h-16 sm:h-20 px-8 sm:px-12 text-lg sm:text-xl rounded-full">Work With Us</Button>
+            <Link href="/contact" onClick={() => window.scrollTo(0, 0)}>
+                <Button size="lg" className="h-14 sm:h-16 px-8 sm:px-12 text-lg sm:text-xl rounded-full">Work With Us</Button>
             </Link>
           </motion.div>
           

@@ -103,8 +103,8 @@ export default function Talent() {
               ))}
             </div>
             <div className="mt-16">
-              <Link href="/contact">
-                <Button size="lg" className="w-full h-20 text-xl rounded-full shadow-2xl shadow-primary/20">
+              <Link href="/contact" onClick={() => window.scrollTo(0, 0)}>
+                <Button size="lg" className="w-full h-16 text-lg rounded-full shadow-2xl shadow-primary/20">
                   Start Your Search
                 </Button>
               </Link>

@@ -100,8 +100,8 @@ export default function Services() {
             Let's discuss a tailored engagement model that fits your unique 
             technical roadmap and business objectives.
           </p>
-          <Link href="/contact">
-            <Button size="lg" variant="secondary" className="h-20 px-14 text-xl rounded-full shadow-2xl relative z-10 hover:scale-105 transition-transform">
+          <Link href="/contact" onClick={() => window.scrollTo(0, 0)}>
+            <Button size="lg" variant="secondary" className="h-16 px-12 text-lg rounded-full shadow-2xl relative z-10 hover:scale-105 transition-transform">
               Connect With Us
             </Button>
           </Link>

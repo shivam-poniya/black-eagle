@@ -72,13 +72,13 @@ function Hero() {
             transition={{ delay: 1.2, duration: 0.8 }}
             className="flex flex-col sm:flex-row gap-8 justify-center items-center"
           >
-            <Link href="/contact">
+            <Link href="/contact" onClick={() => window.scrollTo(0, 0)}>
               <Button size="lg" className="text-xl px-12 h-20 bg-primary text-primary-foreground hover:bg-primary/90 rounded-full group cursor-pointer shadow-2xl shadow-primary/40 transition-all hover:scale-105">
                 Get Started
                 <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-2 transition-transform" />
               </Button>
             </Link>
-            <Link href="/talent">
+            <Link href="/talent" onClick={() => window.scrollTo(0, 0)}>
               <Button size="lg" variant="outline" className="text-xl px-12 h-20 border-border text-foreground hover:bg-accent rounded-full backdrop-blur-xl cursor-pointer transition-all hover:scale-105">
                 Explore Talent
               </Button>
@@ -356,8 +356,8 @@ export default function Home() {
           <p className="text-2xl text-muted-foreground mb-16 max-w-2xl mx-auto font-light">
             Let’s discuss your requirements and connect you with the right talent today.
           </p>
-          <Link href="/contact">
-            <Button size="lg" className="h-20 px-16 text-2xl rounded-full shadow-2xl shadow-primary/20 hover:scale-105 transition-transform">
+          <Link href="/contact" onClick={() => window.scrollTo(0, 0)}>
+            <Button size="lg" className="h-16 px-12 text-lg rounded-full shadow-2xl shadow-primary/20 hover:scale-105 transition-transform">
               Start Hiring Now
             </Button>
           </Link>

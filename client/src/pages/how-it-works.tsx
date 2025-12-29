@@ -97,7 +97,7 @@ export default function HowItWorks() {
         </div>
 
         <div className="text-center">
-          <Link href="/contact">
+          <Link href="/contact" onClick={() => window.scrollTo(0, 0)}>
             <Button size="lg" className="h-16 px-12 text-lg rounded-full shadow-2xl">Start Your Search</Button>
           </Link>
         </div>
