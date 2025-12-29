@@ -4,6 +4,7 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { ScrollToTop } from "@/components/layout/ScrollToTop";
 import Home from "@/pages/home";
 import Services from "@/pages/services";
 import Talent from "@/pages/talent";
@@ -32,6 +33,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <div className="flex flex-col min-h-screen font-sans bg-background text-foreground">
+        <ScrollToTop />
         <Navbar />
         <main className="flex-grow pt-20">
           <Router />
