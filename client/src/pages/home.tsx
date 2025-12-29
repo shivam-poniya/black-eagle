@@ -290,19 +290,42 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Logo Cloud for validation */}
+      {/* Infinite Logo Marquee */}
       <section className="py-32 bg-muted/30 relative overflow-hidden">
-        <div className="container mx-auto px-4">
-          <p className="text-center text-[10px] font-black uppercase tracking-[0.5em] text-muted-foreground mb-16">Trusted by Fortune 500 & Industry Leaders</p>
-          <div className="flex flex-wrap justify-center items-center gap-x-16 gap-y-12 md:gap-x-24 md:gap-y-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-700">
+        <div className="container mx-auto px-4 relative z-20 mb-16">
+          <p className="text-center text-[10px] font-black uppercase tracking-[0.5em] text-muted-foreground">Trusted by Fortune 500 & Industry Leaders</p>
+        </div>
+        
+        <div className="relative flex overflow-hidden">
+          <motion.div 
+            animate={{ x: [0, -1000] }}
+            transition={{ 
+              duration: 30, 
+              repeat: Infinity, 
+              ease: "linear" 
+            }}
+            className="flex whitespace-nowrap gap-24 items-center py-4"
+          >
             {[
               "McKesson", "Comcast", "Netflix", "Fannie Mae",
-              "Shef", "Turing Labs Inc.", "Broccoli AI", "Confido", "Nextera Robotics"
-            ].map((name) => (
-              <span key={name} className="text-xl md:text-3xl font-black font-heading tracking-tighter whitespace-nowrap">{name}</span>
+              "Shef", "Turing Labs Inc.", "Broccoli AI", "Confido", 
+              "Nextera Robotics", "Global Bank", "Stellar AI", "Vertex Systems",
+              "McKesson", "Comcast", "Netflix", "Fannie Mae",
+              "Shef", "Turing Labs Inc.", "Broccoli AI", "Confido", 
+              "Nextera Robotics", "Global Bank", "Stellar AI", "Vertex Systems"
+            ].map((name, idx) => (
+              <span 
+                key={idx} 
+                className="text-2xl md:text-5xl font-black font-heading tracking-tighter text-foreground/30 hover:text-primary transition-colors cursor-default"
+              >
+                {name}
+              </span >
             ))}
-          </div>
+          </motion.div>
         </div>
+
+        <div className="absolute top-0 left-0 w-40 h-full bg-gradient-to-r from-muted/30 to-transparent z-10" />
+        <div className="absolute top-0 right-0 w-40 h-full bg-gradient-to-l from-muted/30 to-transparent z-10" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-primary/5 blur-[120px] rounded-full -z-10" />
       </section>
 
