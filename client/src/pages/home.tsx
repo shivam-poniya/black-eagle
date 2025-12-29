@@ -293,51 +293,91 @@ export default function Home() {
       {/* Testimonials */}
       <section className="py-32 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <motion.div 
-              {...fadeIn}
-              className="bg-background p-12 rounded-3xl shadow-xl border border-border relative overflow-hidden"
-            >
-              <div className="absolute top-0 right-0 p-8 opacity-5">
-                  <Users size={120} />
-              </div>
-              <div className="mb-8 text-primary flex gap-1">
-                {[1,2,3,4,5].map(i => <span key={i} className="text-xl">★</span>)}
-              </div>
-              <blockquote className="text-2xl font-medium mb-10 leading-relaxed text-foreground italic">
-                “We scaled our engineering team quickly with highly skilled developers. Communication and quality exceeded expectations.”
-              </blockquote>
-              <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full" />
-                  <div>
-                      <cite className="not-italic font-bold text-foreground">Founder</cite>
-                      <p className="text-sm text-muted-foreground">US SaaS Company</p>
+          <div className="text-center mb-20">
+            <span className="text-primary font-black tracking-[0.5em] uppercase text-[10px] sm:text-xs mb-4 block">Proven Success</span>
+            <h2 className="text-4xl md:text-6xl font-black font-heading tracking-tighter">Trusted by <span className="text-primary italic">Fortune 500</span> & <br/>YC Startups</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              { 
+                quote: "Scaled our engineering team with elite developers from McKesson's specialized requirements. Quality exceeded expectations.",
+                author: "Engineering Director",
+                company: "McKesson",
+                category: "Fortune 500"
+              },
+              { 
+                quote: "Comcast relies on Black Eagle for high-velocity staff augmentation. Their engineers are production-ready from day one.",
+                author: "VP of Engineering",
+                company: "Comcast",
+                category: "Fortune 500"
+              },
+              { 
+                quote: "Netflix standards are incredibly high. Black Eagle delivered senior talent that integrated seamlessly into our culture.",
+                author: "Tech Lead",
+                company: "Netflix",
+                category: "Fortune 500"
+              },
+              { 
+                quote: "As a YC startup, we need to move fast. Turing Labs Inc. found the perfect architectural owners through their network.",
+                author: "CTO",
+                company: "Turing Labs Inc.",
+                category: "YC Alum"
+              },
+              { 
+                quote: "Shef's growth required rapid scaling. Black Eagle's managed ODC model was a game-changer for our roadmap.",
+                author: "Founder",
+                company: "Shef",
+                category: "YC Alum"
+              },
+              { 
+                quote: "Nextera Robotics needed niche AI mastery. They provided specialists who understood our complex robotics stack.",
+                author: "Head of AI",
+                company: "Nextera Robotics",
+                category: "YC Alum"
+              }
+            ].map((t, idx) => (
+              <motion.div 
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.1 }}
+                className="bg-background p-10 rounded-[2.5rem] shadow-xl border border-border relative flex flex-col justify-between"
+              >
+                <div>
+                  <div className="mb-6 flex justify-between items-start">
+                    <div className="text-primary flex gap-0.5">
+                      {[1,2,3,4,5].map(i => <span key={i} className="text-sm">★</span>)}
+                    </div>
+                    <span className="text-[10px] font-black uppercase tracking-widest px-3 py-1 bg-primary/10 text-primary rounded-full">
+                      {t.category}
+                    </span>
                   </div>
-              </div>
-            </motion.div>
-
-            <motion.div 
-              {...fadeIn}
-              transition={{ delay: 0.2 }}
-              className="bg-background p-12 rounded-3xl shadow-xl border border-border relative overflow-hidden"
-            >
-              <div className="absolute top-0 right-0 p-8 opacity-5">
-                  <Globe size={120} />
-              </div>
-              <div className="mb-8 text-primary flex gap-1">
-                {[1,2,3,4,5].map(i => <span key={i} className="text-xl">★</span>)}
-              </div>
-              <blockquote className="text-2xl font-medium mb-10 leading-relaxed text-foreground italic">
-                “A reliable outsourcing partner that understands both technology and business outcomes.”
-              </blockquote>
-              <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full" />
-                  <div>
-                      <cite className="not-italic font-bold text-foreground">CTO</cite>
-                      <p className="text-sm text-muted-foreground">European Startup</p>
-                  </div>
-              </div>
-            </motion.div>
+                  <blockquote className="text-lg font-medium mb-8 leading-relaxed text-foreground italic">
+                    “{t.quote}”
+                  </blockquote>
+                </div>
+                <div className="flex items-center gap-4 border-t border-border pt-6">
+                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center font-black text-primary text-xs">
+                      {t.company[0]}
+                    </div>
+                    <div>
+                        <cite className="not-italic font-bold text-foreground text-sm">{t.author}</cite>
+                        <p className="text-xs text-muted-foreground font-black uppercase tracking-tighter">{t.company}</p>
+                    </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          
+          {/* Logo Cloud for additional validation */}
+          <div className="mt-24 pt-16 border-t border-border/50">
+            <p className="text-center text-[10px] font-black uppercase tracking-[0.5em] text-muted-foreground mb-12">Trusted by Industry Leaders</p>
+            <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
+              {["Fannie Mae", "Broccoli AI", "Confido", "Turing Labs", "Shef"].map((name) => (
+                <span key={name} className="text-xl md:text-2xl font-black font-heading tracking-tighter">{name}</span>
+              ))}
+            </div>
           </div>
         </div>
       </section>
