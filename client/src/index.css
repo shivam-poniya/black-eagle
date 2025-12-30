@@ -125,7 +125,7 @@
   --chart-4: 280 65% 60%;
   --chart-5: 340 75% 55%;
 
-  --landing-bg: url('@assets/generated_images/minimalist_high_tech_dark_background.png');
+  --landing-bg: url('@assets/generated_images/minimalist_high-tech_dark_abstract_background.png');
 }
 
 @layer base {
