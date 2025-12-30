@@ -86,8 +86,6 @@
   --chart-3: 197 37% 24%;
   --chart-4: 43 74% 66%;
   --chart-5: 27 87% 67%;
-
-  --landing-bg: url('@assets/generated_images/minimalist_high-tech_dark_abstract_background.png');
 }
 
 .dark {
@@ -124,8 +122,6 @@
   --chart-3: 30 80% 55%;
   --chart-4: 280 65% 60%;
   --chart-5: 340 75% 55%;
-
-  --landing-bg: url('@assets/generated_images/minimalist_high-tech_dark_abstract_background.png');
 }
 
 @layer base {
@@ -133,8 +129,7 @@
     @apply border-border;
   }
   body {
-    @apply font-sans antialiased bg-background text-foreground bg-fixed bg-cover bg-center;
-    background-image: var(--landing-bg);
+    @apply font-sans antialiased bg-background text-foreground;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading font-bold tracking-tight;
