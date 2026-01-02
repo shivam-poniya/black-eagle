@@ -40,13 +40,13 @@ export function Navbar() {
           <div className="relative">
             <img 
               src={logoUrl} 
-              alt="Black Eagle Logo" 
+              alt="Loomicsync Logo" 
               className="w-16 h-16 object-contain transition-transform duration-500 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-primary/20 blur-lg rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
           </div>
           <span className="text-[27px] font-bold font-heading tracking-tight leading-none">
-            BLACK EAGLE
+            Loomicsync
           </span>
         </Link>
 

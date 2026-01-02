@@ -51,9 +51,9 @@ function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.8 }}
-            className="text-4xl sm:text-6xl md:text-[9.5rem] font-bold font-heading leading-none mb-8 sm:mb-12 text-foreground tracking-tight whitespace-nowrap overflow-visible"
+            className="text-4xl sm:text-6xl md:text-[9.5rem] font-bold font-heading leading-none mb-8 sm:mb-12 text-foreground tracking-tight whitespace-nowrap overflow-visible uppercase"
           >
-            BLACK EAGLE
+            Loomicsync
           </motion.h1>
           
           <motion.p 

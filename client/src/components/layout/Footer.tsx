@@ -13,11 +13,11 @@ export function Footer() {
             <div className="flex items-center gap-4">
               <img 
                 src={logoUrl} 
-                alt="Black Eagle Logo" 
+                alt="Loomicsync Logo" 
                 className="w-16 h-16 object-contain brightness-0 invert"
               />
               <h3 className="text-[34px] md:text-[42px] font-bold font-heading tracking-tight leading-none">
-                BLACK EAGLE
+                Loomicsync
               </h3>
             </div>
             <p className="text-lg text-primary-foreground/60 font-light leading-relaxed max-w-sm">
@@ -70,7 +70,7 @@ export function Footer() {
 
         <div className="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-white/10 gap-8">
           <p className="text-[10px] font-black tracking-widest uppercase opacity-40">
-            &copy; {new Date().getFullYear()} BLACK EAGLE ELITE. THE GLOBAL STANDARD.
+            &copy; {new Date().getFullYear()} Loomicsync ELITE. THE GLOBAL STANDARD.
           </p>
           <div className="flex gap-12 text-[10px] font-black tracking-widest uppercase opacity-40">
             <a href="#" className="hover:opacity-100 transition-opacity">Privacy Architecture</a>
