@@ -76,8 +76,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="text-xl font-black mb-2 tracking-tight uppercase">Direct Inquiry</h3>
-                  <a href="mailto:hello@blackeagle.com" className="text-2xl text-muted-foreground hover:text-primary transition-colors font-light">
-                    hello@blackeagle.com
+                  <a href="mailto:contact@loomicsync.com" className="text-2xl text-muted-foreground hover:text-primary transition-colors font-light">
+                    contact@loomicsync.com
                   </a>
                 </div>
               </div>
